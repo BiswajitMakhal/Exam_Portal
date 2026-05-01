@@ -34,6 +34,7 @@ class CandidateController {
         examId,
         candidateId: userId,
       });
+
       if (existingResult) {
         return res.redirect(`/student/exam/success/${existingResult._id}`);
       }
@@ -43,10 +44,12 @@ class CandidateController {
         status: "Active",
         isDeleted: false,
       });
-      if (!exam)
+
+      if (!exam) {
         return res.redirect(
           "/student/dashboard?error=Exam not found or inactive",
         );
+      }
 
       const questions = await Question.find({ examId });
 

@@ -73,7 +73,8 @@
                                                                             <% if(q.imageUrl) { %>
                                                                                 <img src="<%= q.imageUrl %>" alt="Q-Img"
                                                                                     class="img-thumbnail"
-                                                                                    style="width: 50px; height: 50px; object-fit: cover;">
+                                                                                    style="width: 50px; height: 50px; object-fit: cover; cursor: pointer;"
+                                                                                    onclick="window.open('<%= q.imageUrl %>', '_blank')">
                                                                                 <% } else { %>
                                                                                     <span class="text-muted small"><i
                                                                                             class="bi bi-image"></i>
@@ -138,7 +139,6 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
-                <!-- Form points to the route we created earlier -->
                 <form action="/admin/questions/bulk-upload/<%= exam._id %>" method="POST" enctype="multipart/form-data">
                     <div class="modal-body p-4">
                         <div class="alert alert-info small mb-4">

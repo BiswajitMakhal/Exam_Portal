@@ -1,7 +1,8 @@
-const csv = require('csvtojson');
+const csv = require("csvtojson");
 const Question = require("../models/Question");
 const Exam = require("../models/Exam");
 const logger = require("../utils/logger");
+const uploadToCloudinary = require("../utils/cloudinaryUpload");
 
 class QuestionController {
   async renderQuestionsList(req, res) {
@@ -44,8 +45,13 @@ class QuestionController {
       const { examId, questionText, options, correctAnswer, marks } = req.body;
 
       let imageUrl = null;
-      if (req.file && req.file.path) {
-        imageUrl = req.file.path;
+
+      if (req.file) {
+        const cloudinaryResult = await uploadToCloudinary(
+          req.file.buffer,
+          "exam_questions",
+        );
+        imageUrl = cloudinaryResult.secure_url;
       }
 
       await Question.create({
@@ -83,7 +89,6 @@ class QuestionController {
     }
   }
 
-  // 5. Handle Question Update
   async updateQuestion(req, res) {
     try {
       const questionId = req.params.questionId;
@@ -96,8 +101,12 @@ class QuestionController {
         marks,
       };
 
-      if (req.file && req.file.path) {
-        updateData.imageUrl = req.file.path;
+      if (req.file) {
+        const cloudinaryResult = await uploadToCloudinary(
+          req.file.buffer,
+          "exam_questions",
+        );
+        updateData.imageUrl = cloudinaryResult.secure_url;
       }
 
       await Question.findByIdAndUpdate(questionId, updateData);
@@ -108,7 +117,7 @@ class QuestionController {
     } catch (error) {
       logger.error(`Error updating question: ${error.message}`);
       res.redirect(
-        `/admin/questions/exam/${req.body.examId}?error=Failed to update question`,
+        `/admin/questions/exam/${examId || req.body.examId}?error=Failed to update question`,
       );
     }
   }
@@ -127,43 +136,53 @@ class QuestionController {
       res.redirect("back");
     }
   }
-    async bulkUploadQuestions(req, res) {
-        try {
-            const examId = req.params.examId;
+  async bulkUploadQuestions(req, res) {
+    try {
+      const examId = req.params.examId;
 
-            if (!req.file) {
-                return res.redirect(`/admin/questions/exam/${examId}?error=Please upload a CSV file`);
-            }
+      if (!req.file) {
+        return res.redirect(
+          `/admin/questions/exam/${examId}?error=Please upload a CSV file`,
+        );
+      }
 
-            let csvString = req.file.buffer.toString('utf8');
+      let csvString = req.file.buffer.toString("utf8");
 
-            csvString = csvString.replace(/^"|"$/g, '');
-            csvString = csvString.trim(); 
+      csvString = csvString.replace(/^"|"$/g, "");
+      csvString = csvString.trim();
 
-            const jsonArray = await csv().fromString(csvString);
+      const jsonArray = await csv().fromString(csvString);
 
-            const questionsToInsert = jsonArray
-                .filter(row => row.questionText && row.questionText.trim() !== '') 
-                .map(row => ({
-                    examId: examId,
-                    questionText: row.questionText.trim(),
-                    options: [row.option1, row.option2, row.option3, row.option4].filter(Boolean),
-                    correctOption: row.correctOption ? row.correctOption.trim() : '', 
-                    marks: Number(row.marks) || 1
-                }));
+      const questionsToInsert = jsonArray
+        .filter((row) => row.questionText && row.questionText.trim() !== "")
+        .map((row) => ({
+          examId: examId,
+          questionText: row.questionText.trim(),
+          options: [row.option1, row.option2, row.option3, row.option4].filter(
+            Boolean,
+          ),
+          correctOption: row.correctOption ? row.correctOption.trim() : "",
+          marks: Number(row.marks) || 1,
+        }));
 
-            if (questionsToInsert.length === 0) {
-                 return res.redirect(`/admin/questions/exam/${examId}?error=CSV is empty or invalid format`);
-            }
+      if (questionsToInsert.length === 0) {
+        return res.redirect(
+          `/admin/questions/exam/${examId}?error=CSV is empty or invalid format`,
+        );
+      }
 
-            await Question.insertMany(questionsToInsert);
+      await Question.insertMany(questionsToInsert);
 
-            res.redirect(`/admin/questions/exam/${examId}?success=${questionsToInsert.length} Questions added successfully via CSV!`);
-        } catch (error) {
-            logger.error(`Error in bulk upload: ${error.message}`);
-            res.redirect(`/admin/questions/exam/${req.params.examId}?error=Failed to process CSV file`);
-        }
+      res.redirect(
+        `/admin/questions/exam/${examId}?success=${questionsToInsert.length} Questions added successfully via CSV!`,
+      );
+    } catch (error) {
+      logger.error(`Error in bulk upload: ${error.message}`);
+      res.redirect(
+        `/admin/questions/exam/${req.params.examId}?error=Failed to process CSV file`,
+      );
     }
+  }
 }
 
 module.exports = new QuestionController();

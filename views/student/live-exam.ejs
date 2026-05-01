@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Live Exam - <%= exam.title %>
-    </title>
+    <title>Live Exam - <%= exam.title %></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
         body {
             background-color: #f4f6f9;
             user-select: none;
-            /* Text selection disable kora holo */
         }
 
         .sticky-timer {
@@ -27,9 +25,11 @@
         .question-card {
             border-left: 4px solid #0d6efd;
         }
+        .custom-radio:hover {
+            background-color: #f8f9fa;
+        }
     </style>
 </head>
-<!-- oncontextmenu="return false;" diye right click disable kora holo -->
 
 <body oncontextmenu="return false;">
 
@@ -58,13 +58,12 @@
         <form id="examForm" action="/student/exam/submit" method="POST">
             <input type="hidden" name="examId" value="<%= exam._id %>">
 
-            <% if(questions && questions.length> 0) { %>
-                <% questions.forEach((q, index)=> { %>
+            <% if(questions && questions.length > 0) { %>
+                <% questions.forEach((q, index) => { %>
                     <div class="card border-0 shadow-sm mb-4 question-card">
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <h5 class="fw-bold text-dark mb-0">Question <%= index + 1 %>
-                                </h5>
+                                <h5 class="fw-bold text-dark mb-0">Question <%= index + 1 %></h5>
                                 <span class="badge bg-secondary">
                                     <%= q.marks %> Marks
                                 </span>
@@ -74,48 +73,45 @@
                                 <%= q.questionText %>
                             </p>
 
-                            <!-- Question Image jodi thake -->
+                            <!-- IMAGE RENDER LOGIC: Cloudinary URL thakle eikhan theke show hobe -->
                             <% if(q.imageUrl) { %>
-                                <div class="mb-4">
-                                    <img src="<%= q.imageUrl %>" alt="Question Image" class="img-fluid rounded border"
+                                <div class="mb-4 text-center">
+                                    <img src="<%= q.imageUrl %>" alt="Question Image" class="img-fluid rounded border shadow-sm"
                                         style="max-height: 300px;">
                                 </div>
-                                <% } %>
+                            <% } %>
 
-                                    <!-- Options -->
-                                    <div class="mt-3">
-                                        <% q.options.forEach((opt, optIndex)=> { %>
-                                            <div class="form-check custom-radio mb-3 border p-3 rounded hover-bg-light">
-                                                <!-- Name attribute e question id dewa hoyeche jate backend easily parse korte pare -->
-                                                <input class="form-check-input fs-5 mt-1" type="radio"
-                                                    name="answers[<%= q._id %>]" id="q<%= index %>_opt<%= optIndex %>"
-                                                    value="<%= opt %>">
-                                                <label class="form-check-label fs-6 ms-2 w-100" style="cursor: pointer;"
-                                                    for="q<%= index %>_opt<%= optIndex %>">
-                                                    <%= opt %>
-                                                </label>
-                                            </div>
-                                            <% }) %>
+                            <!-- Options -->
+                            <div class="mt-3">
+                                <% q.options.forEach((opt, optIndex) => { %>
+                                    <div class="form-check custom-radio mb-3 border p-3 rounded">
+                                        <input class="form-check-input fs-5 mt-1" type="radio"
+                                            name="answers[<%= q._id %>]" id="q<%= index %>_opt<%= optIndex %>"
+                                            value="<%= opt %>">
+                                        <label class="form-check-label fs-6 ms-2 w-100" style="cursor: pointer;"
+                                            for="q<%= index %>_opt<%= optIndex %>">
+                                            <%= opt %>
+                                        </label>
                                     </div>
+                                <% }) %>
+                            </div>
                         </div>
                     </div>
-                    <% }) %>
+                <% }) %>
 
-                        <div class="text-center mt-5">
-                            <button type="button" class="btn btn-primary btn-lg px-5 fw-bold"
-                                onclick="confirmSubmission()">
-                                <i class="bi bi-check2-circle"></i> Submit Exam
-                            </button>
-                        </div>
-                        <% } else { %>
-                            <div class="alert alert-warning text-center">
-                                No questions available for this exam. Please contact your administrator.
-                            </div>
-                            <% } %>
+                <div class="text-center mt-5">
+                    <button type="button" class="btn btn-primary btn-lg px-5 fw-bold" onclick="confirmSubmission()">
+                        <i class="bi bi-check2-circle"></i> Submit Exam
+                    </button>
+                </div>
+            <% } else { %>
+                <div class="alert alert-warning text-center">
+                    No questions available for this exam.
+                </div>
+            <% } %>
         </form>
     </div>
 
-    <!-- SweetAlert for nice popups -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
@@ -127,8 +123,6 @@
         function updateTimer() {
             let minutes = Math.floor(durationInSeconds / 60);
             let seconds = durationInSeconds % 60;
-
-            // Add leading zeros
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
 
@@ -136,27 +130,15 @@
 
             if (durationInSeconds <= 0) {
                 clearInterval(timerInterval);
-                Swal.fire({
-                    title: 'Time is Up!',
-                    text: 'Your exam is being submitted automatically.',
-                    icon: 'info',
-                    allowOutsideClick: false,
-                    showConfirmButton: false,
-                    timer: 3000
-                }).then(() => {
-                    examForm.submit();
-                });
-            } else if (durationInSeconds === 300) { // 5 minutes left warning
-                timerDisplay.classList.replace('bg-danger', 'bg-warning');
-                timerDisplay.classList.add('text-dark');
+                examForm.submit();
             }
             durationInSeconds--;
         }
 
         const timerInterval = setInterval(updateTimer, 1000);
-        updateTimer(); // Initial call
+        updateTimer();
 
-        // 2. Anti-Cheat Logic (Tab Switching)
+        // 2. Anti-Cheat: Tab Switching
         let warningCount = 0;
         const maxWarnings = 3;
 
@@ -166,20 +148,11 @@
                 document.getElementById('warningDisplay').innerText = `Warnings: ${warningCount} / ${maxWarnings}`;
 
                 if (warningCount >= maxWarnings) {
-                    Swal.fire({
-                        title: 'Exam Terminated',
-                        text: 'You have exceeded the maximum number of tab switches. Your exam is being submitted automatically.',
-                        icon: 'error',
-                        allowOutsideClick: false,
-                        showConfirmButton: false,
-                        timer: 4000
-                    }).then(() => {
-                        examForm.submit();
-                    });
+                    examForm.submit();
                 } else {
                     Swal.fire({
                         title: 'Warning!',
-                        text: `Do not switch tabs or minimize the browser! Warning ${warningCount} of ${maxWarnings}. Exam will be auto-submitted on the 3rd warning.`,
+                        text: `Do not switch tabs! Warning ${warningCount} of ${maxWarnings}.`,
                         icon: 'warning',
                         confirmButtonText: 'I Understand'
                     });
@@ -187,15 +160,14 @@
             }
         });
 
-        // 3. Manual Submit Confirmation
+        // 3. Manual Submit
         function confirmSubmission() {
             Swal.fire({
-                title: 'Are you sure?',
-                text: "Do you want to submit your exam? You won't be able to change your answers.",
+                title: 'Submit Exam?',
+                text: "You won't be able to change your answers!",
                 icon: 'question',
                 showCancelButton: true,
                 confirmButtonColor: '#0d6efd',
-                cancelButtonColor: '#6c757d',
                 confirmButtonText: 'Yes, Submit!'
             }).then((result) => {
                 if (result.isConfirmed) {
@@ -205,5 +177,4 @@
         }
     </script>
 </body>
-
 </html>
