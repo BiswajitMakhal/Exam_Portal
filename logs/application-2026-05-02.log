@@ -1,0 +1,485 @@
+2026-05-02 00:00:18 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:18 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:00:21 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:21 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:00:25 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:25 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:00:28 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:28 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:00:33 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:33 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:00:36 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:36 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:00:38 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:38 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:00:42 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:42 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:00:46 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:46 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:00:48 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:48 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:00:52 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:52 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:00:56 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:56 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:00:59 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:00:59 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:03:11 [INFO]: Incoming Request: POST /admin/bulk/users
+2026-05-02 00:03:11 [INFO]: Incoming Request: GET /admin/users?error=NoValidUsersFound
+2026-05-02 00:03:20 [INFO]: Incoming Request: GET /admin/users?error=NoValidUsersFound
+2026-05-02 00:03:39 [INFO]: Incoming Request: GET /admin/users?error=NoValidUsersFound
+2026-05-02 00:03:50 [INFO]: Incoming Request: POST /admin/bulk/users
+2026-05-02 00:03:51 [INFO]: Incoming Request: GET /admin/users?error=NoValidUsersFound
+2026-05-02 00:04:18 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:04:19 [INFO]: Incoming Request: GET /admin/users
+2026-05-02 00:04:21 [INFO]: Incoming Request: GET /admin/users/create
+2026-05-02 00:04:21 [ERROR]: Server Error: Failed to lookup view "admin/users/create" in views directory "E:\PRACTICE\Exam_Portal\views" 
+Stack: Error: Failed to lookup view "admin/users/create" in views directory "E:\PRACTICE\Exam_Portal\views"
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\response.js:923:7)
+    at renderCreateForm (E:\PRACTICE\Exam_Portal\app\controllers\userController.js:18:11)
+    at Layer.handleRequest (E:\PRACTICE\Exam_Portal\node_modules\router\lib\layer.js:152:17)
+    at next (E:\PRACTICE\Exam_Portal\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\PRACTICE\Exam_Portal\node_modules\router\lib\route.js:117:3)
+    at handle (E:\PRACTICE\Exam_Portal\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\PRACTICE\Exam_Portal\node_modules\router\lib\layer.js:152:17)
+    at E:\PRACTICE\Exam_Portal\node_modules\router\index.js:295:15
+    at processParams (E:\PRACTICE\Exam_Portal\node_modules\router\index.js:582:12)
+2026-05-02 00:04:27 [INFO]: Incoming Request: GET /admin/users/create
+2026-05-02 00:04:27 [ERROR]: Server Error: Failed to lookup view "admin/users/create" in views directory "E:\PRACTICE\Exam_Portal\views" 
+Stack: Error: Failed to lookup view "admin/users/create" in views directory "E:\PRACTICE\Exam_Portal\views"
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\response.js:923:7)
+    at renderCreateForm (E:\PRACTICE\Exam_Portal\app\controllers\userController.js:18:11)
+    at Layer.handleRequest (E:\PRACTICE\Exam_Portal\node_modules\router\lib\layer.js:152:17)
+    at next (E:\PRACTICE\Exam_Portal\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\PRACTICE\Exam_Portal\node_modules\router\lib\route.js:117:3)
+    at handle (E:\PRACTICE\Exam_Portal\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\PRACTICE\Exam_Portal\node_modules\router\lib\layer.js:152:17)
+    at E:\PRACTICE\Exam_Portal\node_modules\router\index.js:295:15
+    at processParams (E:\PRACTICE\Exam_Portal\node_modules\router\index.js:582:12)
+2026-05-02 00:06:56 [INFO]: Incoming Request: GET /admin/users
+2026-05-02 00:06:58 [INFO]: Incoming Request: GET /admin/users/create
+2026-05-02 00:07:03 [INFO]: Incoming Request: GET /admin/users
+2026-05-02 00:07:13 [INFO]: Incoming Request: POST /admin/bulk/users
+2026-05-02 00:07:14 [INFO]: Incoming Request: GET /admin/users?error=NoValidUsersFound
+2026-05-02 00:07:26 [INFO]: Incoming Request: GET /admin/users?error=NoValidUsersFound
+2026-05-02 00:11:02 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:11:02 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:11:10 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:11:10 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:11:13 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:11:13 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:11:17 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:11:17 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:11:22 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:11:22 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:11:28 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:11:28 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:11:33 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:11:33 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:14:06 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:14:06 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:14:10 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:14:10 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:14:21 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:14:21 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:14:25 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:14:25 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:14:28 [INFO]: Incoming Request: GET /admin/users?error=NoValidUsersFound
+2026-05-02 00:14:41 [INFO]: Incoming Request: POST /admin/bulk/users
+2026-05-02 00:14:41 [INFO]: Incoming Request: GET /admin/users?error=NoValidUsersFound
+2026-05-02 00:22:00 [INFO]: Incoming Request: POST /admin/bulk/users
+2026-05-02 00:22:01 [INFO]: Incoming Request: GET /admin/users?success=10UsersUploaded
+2026-05-02 00:22:23 [INFO]: Incoming Request: GET /admin/users?success=10UsersUploaded
+2026-05-02 00:22:31 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:22:32 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:22:34 [INFO]: Incoming Request: GET /admin/exams/create
+2026-05-02 00:22:36 [INFO]: Incoming Request: GET /admin/users
+2026-05-02 00:22:39 [INFO]: Incoming Request: GET /admin/users/create
+2026-05-02 00:23:00 [INFO]: Incoming Request: POST /admin/users/create
+2026-05-02 00:23:00 [INFO]: Incoming Request: GET /admin/users?success=User%20created%20successfully
+2026-05-02 00:23:04 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:23:06 [INFO]: Incoming Request: GET /admin/users
+2026-05-02 00:23:07 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:23:12 [INFO]: Incoming Request: POST /admin/exams/delete/69f2fee2ad4ff835277fc0aa
+2026-05-02 00:23:12 [INFO]: Incoming Request: GET /admin/exams?success=ExamDeleted
+2026-05-02 00:23:15 [INFO]: Incoming Request: POST /admin/exams/delete/69f3c9ea2956d30f09d6933d
+2026-05-02 00:23:16 [INFO]: Incoming Request: GET /admin/exams?success=ExamDeleted
+2026-05-02 00:23:17 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4
+2026-05-02 00:23:37 [INFO]: Incoming Request: POST /admin/questions/delete/69f4eee9accb5374ad729544
+2026-05-02 00:23:37 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?success=Question%20deleted%20successfully
+2026-05-02 00:25:42 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:25:49 [INFO]: Incoming Request: POST /admin/exams/delete/69f4da9de1f216040a0ec5f4
+2026-05-02 00:25:49 [INFO]: Incoming Request: GET /admin/exams?success=ExamDeleted
+2026-05-02 00:27:15 [INFO]: Incoming Request: GET /admin/exams?success=ExamDeleted
+2026-05-02 00:27:15 [INFO]: Incoming Request: GET /admin/exams?success=ExamDeleted
+2026-05-02 00:27:17 [INFO]: Incoming Request: GET /admin/exams/create
+2026-05-02 00:27:18 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:27:22 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:27:24 [INFO]: Incoming Request: GET /admin/users
+2026-05-02 00:27:27 [INFO]: Incoming Request: GET /admin/results
+2026-05-02 00:27:29 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:28:13 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:28:15 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:28:16 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:28:18 [INFO]: Incoming Request: GET /admin/exams/create
+2026-05-02 00:28:42 [INFO]: Incoming Request: GET /admin/exams/create
+2026-05-02 00:30:22 [INFO]: Incoming Request: POST /admin/exams/create
+2026-05-02 00:30:22 [INFO]: Incoming Request: GET /admin/exams?success=ExamCreated
+2026-05-02 00:30:24 [INFO]: Incoming Request: GET /admin/questions/exam/69f4f846cdaa59aa8cd9b877
+2026-05-02 00:30:35 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4f846cdaa59aa8cd9b877
+2026-05-02 00:30:35 [INFO]: Incoming Request: GET /admin/questions/exam/69f4f846cdaa59aa8cd9b877?success=10%20Questions%20added%20successfully%20via%20CSV!
+2026-05-02 00:30:44 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:30:49 [INFO]: Incoming Request: GET /admin/exams/create
+2026-05-02 00:31:26 [INFO]: Incoming Request: POST /admin/exams/create
+2026-05-02 00:31:26 [INFO]: Incoming Request: GET /admin/exams?success=ExamCreated
+2026-05-02 00:31:30 [INFO]: Incoming Request: GET /admin/questions/exam/69f4f886cdaa59aa8cd9b882
+2026-05-02 00:31:41 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4f886cdaa59aa8cd9b882
+2026-05-02 00:31:42 [INFO]: Incoming Request: GET /admin/questions/exam/69f4f886cdaa59aa8cd9b882?success=10%20Questions%20added%20successfully%20via%20CSV!
+2026-05-02 00:31:45 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:32:13 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:32:13 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:35:08 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:35:08 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:36:46 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:36:46 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:36:46 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:38:21 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:38:21 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:39:18 [INFO]: Server running on http://localhost:3000
+2026-05-02 00:39:18 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 00:39:19 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:39:20 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:39:20 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:40:26 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:40:26 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:40:26 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:40:42 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:40:43 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:40:43 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:41:16 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:41:16 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:41:16 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:46:49 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:46:49 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:46:49 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:47:34 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:47:34 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:47:34 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:49:07 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 00:49:08 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:49:08 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:49:11 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:49:11 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:49:11 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:49:16 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:49:16 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:49:16 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:50:59 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:50:59 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:50:59 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:51:16 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:51:16 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:51:16 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:51:25 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:51:25 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:51:25 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:51:37 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:51:38 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:51:38 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:52:00 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:52:00 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:52:00 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:53:02 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:53:02 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:53:02 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:53:24 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:53:24 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:53:24 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:53:53 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:53:53 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:53:53 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:56:32 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:56:33 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:56:33 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:58:12 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:58:12 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:58:12 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:58:22 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:58:22 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:58:22 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:58:55 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:58:55 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:58:55 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:59:02 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:59:02 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:59:02 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:59:11 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:59:12 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:59:12 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:59:18 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:59:18 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:59:18 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 00:59:47 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 00:59:59 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 01:00:02 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:02 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:06 [INFO]: Incoming Request: GET /admin/users
+2026-05-02 01:00:07 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:07 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:23 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 01:00:23 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:23 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:28 [INFO]: Incoming Request: GET /admin/users
+2026-05-02 01:00:28 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:28 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:32 [INFO]: Incoming Request: GET /admin/users
+2026-05-02 01:00:33 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:33 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:37 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 01:00:37 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:37 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:41 [INFO]: Incoming Request: GET /admin/results
+2026-05-02 01:00:42 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:00:42 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:03:07 [INFO]: Incoming Request: GET /admin/results
+2026-05-02 01:03:08 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:03:08 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:03:29 [INFO]: Incoming Request: GET /admin/results
+2026-05-02 01:03:30 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:03:30 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:03:45 [INFO]: Incoming Request: GET /admin/results
+2026-05-02 01:03:45 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:03:45 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:03:48 [INFO]: Incoming Request: GET /admin/results/69f4f886cdaa59aa8cd9b882
+2026-05-02 01:03:48 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:03:48 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:05:46 [INFO]: Incoming Request: GET /admin/results/69f4f886cdaa59aa8cd9b882
+2026-05-02 01:05:47 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:05:47 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:08:14 [INFO]: Incoming Request: GET /admin/results/69f4f886cdaa59aa8cd9b882
+2026-05-02 01:08:15 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:08:15 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:09:05 [INFO]: Incoming Request: GET /admin/results/69f4f886cdaa59aa8cd9b882
+2026-05-02 01:09:05 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:09:05 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:10:59 [INFO]: Incoming Request: GET /admin/results/69f4f886cdaa59aa8cd9b882
+2026-05-02 01:10:59 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:10:59 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:12:01 [INFO]: Incoming Request: GET /admin/users
+2026-05-02 01:12:01 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:12:01 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:12:06 [INFO]: Incoming Request: GET /admin/results
+2026-05-02 01:12:07 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:12:07 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:12:11 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 01:12:11 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:12:11 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:15:31 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:15:31 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:15:54 [INFO]: Incoming Request: GET /admin/exams
+2026-05-02 01:15:54 [INFO]: Incoming Request: GET /login
+2026-05-02 01:15:59 [INFO]: Incoming Request: GET /admin/users
+2026-05-02 01:15:59 [INFO]: Incoming Request: GET /login
+2026-05-02 01:19:35 [INFO]: Incoming Request: GET /login
+2026-05-02 01:19:37 [INFO]: Incoming Request: GET /login
+2026-05-02 01:19:40 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-02 01:19:40 [INFO]: Incoming Request: GET /login
+2026-05-02 01:20:17 [INFO]: Incoming Request: GET /login
+2026-05-02 01:20:17 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header" 
+Stack: Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header"
+    at getIncludePath (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:170:19)
+    at includeFile (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:284:21)
+    at include (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:630:24)
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\auth\\login.ejs":10:17)
+    at login (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+2026-05-02 01:20:18 [INFO]: Incoming Request: GET /login
+2026-05-02 01:20:18 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header" 
+Stack: Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header"
+    at getIncludePath (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:170:19)
+    at includeFile (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:284:21)
+    at include (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:630:24)
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\auth\\login.ejs":10:17)
+    at login (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+2026-05-02 01:20:20 [INFO]: Incoming Request: GET /admin/results
+2026-05-02 01:20:20 [INFO]: Incoming Request: GET /login
+2026-05-02 01:20:20 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header" 
+Stack: Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header"
+    at getIncludePath (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:170:19)
+    at includeFile (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:284:21)
+    at include (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:630:24)
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\auth\\login.ejs":10:17)
+    at login (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+2026-05-02 01:20:27 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-02 01:20:27 [INFO]: Incoming Request: GET /login
+2026-05-02 01:20:27 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header" 
+Stack: Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header"
+    at getIncludePath (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:170:19)
+    at includeFile (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:284:21)
+    at include (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:630:24)
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\auth\\login.ejs":10:17)
+    at login (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+2026-05-02 01:20:28 [INFO]: Incoming Request: GET /login
+2026-05-02 01:20:28 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header" 
+Stack: Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header"
+    at getIncludePath (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:170:19)
+    at includeFile (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:284:21)
+    at include (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:630:24)
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\auth\\login.ejs":10:17)
+    at login (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+2026-05-02 01:20:44 [INFO]: Incoming Request: GET /login
+2026-05-02 01:21:44 [INFO]: Incoming Request: GET /login
+2026-05-02 01:23:42 [INFO]: Incoming Request: GET /login
+2026-05-02 01:24:27 [INFO]: Incoming Request: POST /login
+2026-05-02 01:24:28 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-02 01:24:38 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:24:38 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:24:47 [INFO]: Incoming Request: GET /student/exam/live/69f4f886cdaa59aa8cd9b882
+2026-05-02 01:24:48 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:24:48 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:24:55 [INFO]: Incoming Request: POST /student/exam/submit
+2026-05-02 01:24:56 [INFO]: Incoming Request: GET /student/exam/success/69f50510848077a32a2bb79b
+2026-05-02 01:24:57 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:24:57 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:24:59 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-02 01:25:00 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:25:00 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-02 01:30:13 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:30:13 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:30:16 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:30:16 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:30:19 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:30:19 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:39:26 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:39:26 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:39:37 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:39:37 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:39:49 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:39:49 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:40:18 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:40:18 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:40:25 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:40:25 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:40:28 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:40:28 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:40:35 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:40:35 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:40:39 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:40:39 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:40:46 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:40:46 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:41:13 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:41:13 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:41:23 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:41:23 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:41:32 [INFO]: Server running on http://localhost:3000
+2026-05-02 01:41:32 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-02 01:41:40 [INFO]: Incoming Request: GET /student/exam/live/69f4f886cdaa59aa8cd9b882
+2026-05-02 01:41:40 [INFO]: Incoming Request: GET /student/exam/success/69f50510848077a32a2bb79b
+2026-05-02 01:41:42 [INFO]: Incoming Request: GET /student/exam/success/69f50510848077a32a2bb79b
+2026-05-02 01:41:43 [INFO]: Incoming Request: GET /student/exam/success/69f50510848077a32a2bb79b
+2026-05-02 01:41:43 [INFO]: Incoming Request: GET /student/exam/success/69f50510848077a32a2bb79b
+2026-05-02 01:41:45 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-02 01:41:47 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-02 01:41:50 [INFO]: Incoming Request: GET /student/exam/live/69f4f886cdaa59aa8cd9b882
+2026-05-02 01:41:50 [INFO]: Incoming Request: GET /student/exam/success/69f50510848077a32a2bb79b
+2026-05-02 01:41:53 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-02 01:41:56 [INFO]: Incoming Request: GET /logout
+2026-05-02 01:41:56 [INFO]: Incoming Request: GET /login?success=Logged%20out%20successfully
+2026-05-02 01:42:05 [INFO]: Incoming Request: GET /register
+2026-05-02 01:42:28 [INFO]: Incoming Request: POST /register
+2026-05-02 01:42:29 [INFO]: Incoming Request: GET /login?success=Account%20created%20successfully.%20Please%20login.
+2026-05-02 01:42:39 [INFO]: Incoming Request: POST /login
+2026-05-02 01:42:39 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-02 01:42:43 [INFO]: Incoming Request: GET /student/exam/live/69f4f886cdaa59aa8cd9b882
+2026-05-02 01:44:24 [INFO]: Incoming Request: POST /student/exam/submit
+2026-05-02 01:44:24 [INFO]: Report card email triggered for makhalbiswajit1@gmail.com
+2026-05-02 01:44:24 [INFO]: Incoming Request: GET /student/exam/success/69f509a0e1c98630336844ed
+2026-05-02 01:44:31 [INFO]: Email sent successfully to makhalbiswajit1@gmail.com | MessageID: <df58b252-161f-21d8-1203-639aff465049@gmail.com>
+2026-05-02 01:44:57 [INFO]: Incoming Request: GET /student/dashboard

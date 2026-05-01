@@ -1,0 +1,117 @@
+<%- include('../../layouts/header') %>
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <!-- Card er width ta bariyechi jate two-column dhore -->
+    <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 900px;">
+        <div class="row g-0">
+            
+            <!-- Left Side: Login Form -->
+            <div class="col-md-6 p-4 p-sm-5 bg-white">
+                <div class="text-center mb-4">
+                    <h3 class="fw-bold text-primary"><i class="bi bi-laptop"></i> ExamPortal</h3>
+                    <p class="text-muted small">Sign in to your account</p>
+                </div>
+
+                <% if (typeof error !=='undefined' && error) { %>
+                    <div class="alert alert-danger alert-dismissible fade show small" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i><%= error %>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <% } %>
+                
+                <% if (typeof success !=='undefined' && success) { %>
+                    <div class="alert alert-success alert-dismissible fade show small" role="alert">
+                        <i class="bi bi-check-circle-fill me-2"></i><%= success %>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <% } %>
+
+                <form action="/login" method="POST">
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-secondary fw-semibold small">Email Address</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-white"><i class="bi bi-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label for="password" class="form-label text-secondary fw-semibold mb-0 small">Password</label>
+                        </div>
+                        <div class="input-group mt-2">
+                            <span class="input-group-text bg-white"><i class="bi bi-lock"></i></span>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" required>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 mb-3">
+                        <button type="submit" class="btn btn-primary btn-lg fs-6 shadow-sm">Sign In</button>
+                    </div>
+
+                    <!-- Register Link for Candidates -->
+                    <div class="text-center mt-3 border-top pt-3">
+                        <span class="text-muted small">New Candidate? </span>
+                        <a href="/register" class="text-decoration-none fw-bold small text-primary">Register here to take exams</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Side: Demo Credentials -->
+            <div class="col-md-6 p-4 p-sm-5 d-flex flex-column justify-content-center" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 1px solid #dee2e6;">
+                <div class="text-center mb-4">
+                    <h5 class="fw-bold text-dark"><i class="bi bi-info-circle-fill text-primary"></i> Demo Access</h5>
+                    <p class="small text-muted">Use these credentials for evaluation.</p>
+                </div>
+
+                <!-- SuperAdmin Box -->
+                <div class="card border-0 shadow-sm mb-3 rounded-3">
+                    <div class="card-body p-3">
+                        <span class="badge bg-danger mb-2">SuperAdmin Role</span>
+                        <div class="d-flex justify-content-between">
+                            <div class="small">
+                                <span class="text-muted d-block">Email:</span>
+                                <strong class="user-select-all">admin@demo.com</strong>
+                            </div>
+                            <div class="small text-end">
+                                <span class="text-muted d-block">Password:</span>
+                                <strong class="user-select-all">Admin@123</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Examiner Box -->
+                <div class="card border-0 shadow-sm mb-3 rounded-3">
+                    <div class="card-body p-3">
+                        <span class="badge bg-success mb-2">Examiner Role</span>
+                        <div class="d-flex justify-content-between">
+                            <div class="small">
+                                <span class="text-muted d-block">Email:</span>
+                                <strong class="user-select-all">teacher@demo.com</strong>
+                            </div>
+                            <div class="small text-end">
+                                <span class="text-muted d-block">Password:</span>
+                                <strong class="user-select-all">Teacher@123</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW: Candidate Instruction Box -->
+                <div class="card border-0 shadow-sm rounded-3 bg-white bg-opacity-75">
+                    <div class="card-body p-3 text-center">
+                        <span class="badge bg-info text-dark mb-2">Candidate Role</span>
+                        <p class="small text-muted mb-0">
+                            No demo login needed. Please <a href="/register" class="fw-bold text-primary text-decoration-none">Register</a> a new account to test the student dashboard.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<%- include('../../layouts/footer') %>

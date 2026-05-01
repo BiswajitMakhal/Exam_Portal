@@ -1,0 +1,144 @@
+2026-05-02 00:04:21 [ERROR]: Server Error: Failed to lookup view "admin/users/create" in views directory "E:\PRACTICE\Exam_Portal\views" 
+Stack: Error: Failed to lookup view "admin/users/create" in views directory "E:\PRACTICE\Exam_Portal\views"
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\response.js:923:7)
+    at renderCreateForm (E:\PRACTICE\Exam_Portal\app\controllers\userController.js:18:11)
+    at Layer.handleRequest (E:\PRACTICE\Exam_Portal\node_modules\router\lib\layer.js:152:17)
+    at next (E:\PRACTICE\Exam_Portal\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\PRACTICE\Exam_Portal\node_modules\router\lib\route.js:117:3)
+    at handle (E:\PRACTICE\Exam_Portal\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\PRACTICE\Exam_Portal\node_modules\router\lib\layer.js:152:17)
+    at E:\PRACTICE\Exam_Portal\node_modules\router\index.js:295:15
+    at processParams (E:\PRACTICE\Exam_Portal\node_modules\router\index.js:582:12)
+2026-05-02 00:04:27 [ERROR]: Server Error: Failed to lookup view "admin/users/create" in views directory "E:\PRACTICE\Exam_Portal\views" 
+Stack: Error: Failed to lookup view "admin/users/create" in views directory "E:\PRACTICE\Exam_Portal\views"
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\response.js:923:7)
+    at renderCreateForm (E:\PRACTICE\Exam_Portal\app\controllers\userController.js:18:11)
+    at Layer.handleRequest (E:\PRACTICE\Exam_Portal\node_modules\router\lib\layer.js:152:17)
+    at next (E:\PRACTICE\Exam_Portal\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\PRACTICE\Exam_Portal\node_modules\router\lib\route.js:117:3)
+    at handle (E:\PRACTICE\Exam_Portal\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\PRACTICE\Exam_Portal\node_modules\router\lib\layer.js:152:17)
+    at E:\PRACTICE\Exam_Portal\node_modules\router\index.js:295:15
+    at processParams (E:\PRACTICE\Exam_Portal\node_modules\router\index.js:582:12)
+2026-05-02 01:20:17 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header" 
+Stack: Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header"
+    at getIncludePath (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:170:19)
+    at includeFile (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:284:21)
+    at include (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:630:24)
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\auth\\login.ejs":10:17)
+    at login (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+2026-05-02 01:20:18 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header" 
+Stack: Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header"
+    at getIncludePath (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:170:19)
+    at includeFile (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:284:21)
+    at include (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:630:24)
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\auth\\login.ejs":10:17)
+    at login (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+2026-05-02 01:20:20 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header" 
+Stack: Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header"
+    at getIncludePath (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:170:19)
+    at includeFile (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:284:21)
+    at include (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:630:24)
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\auth\\login.ejs":10:17)
+    at login (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+2026-05-02 01:20:27 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header" 
+Stack: Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header"
+    at getIncludePath (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:170:19)
+    at includeFile (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:284:21)
+    at include (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:630:24)
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\auth\\login.ejs":10:17)
+    at login (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+2026-05-02 01:20:28 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header" 
+Stack: Error: E:\PRACTICE\Exam_Portal\views\admin\auth\login.ejs:1
+ >> 1| <%- include('../layouts/header') %> <!-- Tomar header-er path theek kore nio -->
+    2| 
+    3| <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f4f6f9;">
+    4|     <div class="card shadow-lg border-0 rounded-4 overflow-hidden" style="width: 100%; max-width: 850px;">
+
+Could not find the include file "../layouts/header"
+    at getIncludePath (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:170:19)
+    at includeFile (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:284:21)
+    at include (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:630:24)
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\auth\\login.ejs":10:17)
+    at login (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)

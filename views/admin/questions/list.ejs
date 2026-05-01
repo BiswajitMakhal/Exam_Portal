@@ -1,0 +1,165 @@
+<%- include('../../layouts/header') %>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <%- include('../../layouts/sidebar') %>
+
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light" style="min-height: 100vh;">
+                    <%- include('../../layouts/navbar') %>
+
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
+                            <div>
+                                <h1 class="h3 fw-bold"><i class="bi bi-list-task text-primary"></i> Manage Questions
+                                </h1>
+                                <p class="text-muted mb-0">Exam: <strong class="text-dark">
+                                        <%= exam ? exam.title : 'Unknown Exam' %>
+                                    </strong></p>
+                            </div>
+                            <div class="btn-toolbar mb-2 mb-md-0 gap-2">
+                                <a href="/admin/exams" class="btn btn-sm btn-outline-secondary">
+                                    <i class="bi bi-arrow-left"></i> Back to Exams
+                                </a>
+                                <!-- Bulk Upload Button (Opens Modal) -->
+                                <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#bulkUploadModal">
+                                    <i class="bi bi-filetype-csv"></i> Bulk Upload (CSV)
+                                </button>
+                                <!-- Manual Add Question Button -->
+                                <a href="/admin/questions/create/<%= exam ? exam._id : '' %>"
+                                    class="btn btn-sm btn-primary">
+                                    <i class="bi bi-plus-circle"></i> Add Question
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Flash Messages -->
+                        <% if (typeof error !=='undefined' && error) { %>
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                <%= error %><button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                            <% } %>
+                                <% if (typeof success !=='undefined' && success) { %>
+                                    <div class="alert alert-success alert-dismissible fade show">
+                                        <%= success %><button type="button" class="btn-close"
+                                                data-bs-dismiss="alert"></button>
+                                    </div>
+                                    <% } %>
+
+                                        <!-- Questions List Table -->
+                                        <div class="card shadow-sm border-0 mb-4">
+                                            <div class="card-body p-0">
+                                                <% if(questions && questions.length> 0) { %>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-hover align-middle mb-0">
+                                                            <thead class="table-light">
+                                                                <tr>
+                                                                    <th class="ps-3" style="width: 5%;">#</th>
+                                                                    <th style="width: 10%;">Image</th>
+                                                                    <th style="width: 45%;">Question Text</th>
+                                                                    <th style="width: 15%;">Marks</th>
+                                                                    <th class="text-end pe-3" style="width: 25%;">
+                                                                        Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <% questions.forEach((q, index)=> { %>
+                                                                    <tr>
+                                                                        <td class="ps-3 fw-bold">
+                                                                            <%= index + 1 %>
+                                                                        </td>
+                                                                        <td>
+                                                                            <% if(q.imageUrl) { %>
+                                                                                <img src="<%= q.imageUrl %>" alt="Q-Img"
+                                                                                    class="img-thumbnail"
+                                                                                    style="width: 50px; height: 50px; object-fit: cover;">
+                                                                                <% } else { %>
+                                                                                    <span class="text-muted small"><i
+                                                                                            class="bi bi-image"></i>
+                                                                                        None</span>
+                                                                                    <% } %>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="fw-semibold text-truncate"
+                                                                                style="max-width: 300px;">
+                                                                                <%= q.questionText %>
+                                                                            </div>
+                                                                            <div class="small text-success mt-1">Ans:
+                                                                                <%= q.correctAnswer %>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td><span class="badge bg-secondary">
+                                                                                <%= q.marks %> Marks
+                                                                            </span></td>
+                                                                        <td class="text-end pe-3">
+                                                                            <a href="/admin/questions/edit/<%= q._id %>"
+                                                                                class="btn btn-sm btn-outline-primary"><i
+                                                                                    class="bi bi-pencil-square"></i>
+                                                                                Edit</a>
+                                                                            <form
+                                                                                action="/admin/questions/delete/<%= q._id %>"
+                                                                                method="POST" class="d-inline"
+                                                                                onsubmit="return confirm('Delete this question?');">
+                                                                                <input type="hidden" name="examId"
+                                                                                    value="<%= exam._id %>">
+                                                                                <button type="submit"
+                                                                                    class="btn btn-sm btn-outline-danger"><i
+                                                                                        class="bi bi-trash"></i></button>
+                                                                            </form>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <% }) %>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <% } else { %>
+                                                        <div class="text-center py-5">
+                                                            <i class="bi bi-folder-x text-muted"
+                                                                style="font-size: 3rem;"></i>
+                                                            <p class="mt-3 text-muted">No questions added yet. Click
+                                                                "Add Question" or "Bulk Upload" to start.</p>
+                                                        </div>
+                                                        <% } %>
+                                            </div>
+                                        </div>
+                </main>
+        </div>
+    </div>
+
+    <!-- Bulk Upload Modal -->
+    <div class="modal fade" id="bulkUploadModal" tabindex="-1" aria-labelledby="bulkUploadModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-success text-white border-0">
+                    <h5 class="modal-title" id="bulkUploadModalLabel"><i class="bi bi-cloud-arrow-up-fill me-2"></i>Bulk
+                        Upload Questions</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <!-- Form points to the route we created earlier -->
+                <form action="/admin/questions/bulk-upload/<%= exam._id %>" method="POST" enctype="multipart/form-data">
+                    <div class="modal-body p-4">
+                        <div class="alert alert-info small mb-4">
+                            <strong><i class="bi bi-info-circle"></i> Note:</strong> Ensure your CSV has the following
+                            headers exactly: <br>
+                            <code>questionText, option1, option2, option3, option4, correctAnswer, marks</code>
+                        </div>
+                        <div class="mb-3">
+                            <label for="csvFile" class="form-label fw-semibold">Select CSV File <span
+                                    class="text-danger">*</span></label>
+                            <input class="form-control" type="file" id="csvFile" name="csvFile" accept=".csv" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 bg-light">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-success"><i class="bi bi-upload"></i> Upload &
+                            Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../../layouts/footer') %>

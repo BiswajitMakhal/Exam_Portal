@@ -1,0 +1,126 @@
+<%- include('../../layouts/header') %>
+
+    <div class="container-fluid">
+        <div class="row">
+            <%- include('../../layouts/sidebar') %>
+
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light" style="min-height: 100vh;">
+                    <%- include('../../layouts/navbar') %>
+
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
+                            <h1 class="h3 fw-bold"><i class="bi bi-file-earmark-text text-primary"></i> Manage Exams
+                            </h1>
+                            <div class="btn-toolbar mb-2 mb-md-0">
+                                <a href="/admin/exams/create" class="btn btn-sm btn-primary">
+                                    <i class="bi bi-plus-circle"></i> Create New Exam
+                                </a>
+                            </div>
+                        </div>
+
+                        <% if (typeof error !=='undefined' && error) { %>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <%= error %><button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                            <% } %>
+                                <% if (typeof success !=='undefined' && success) { %>
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <%= success %><button type="button" class="btn-close"
+                                                data-bs-dismiss="alert"></button>
+                                    </div>
+                                    <% } %>
+
+                                        <div class="card p-3 shadow-sm border-0 mb-4">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover table-striped align-middle text-nowrap">
+                                                    <thead class="table-dark">
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Exam Title</th>
+                                                            <th>Duration</th>
+                                                            <th>Passing Marks</th>
+                                                            <th>Status</th>
+                                                            <% if(locals.user && locals.user.role==='SuperAdmin' ) { %>
+                                                                <th>Examiner</th>
+                                                                <% } %>
+                                                                    <th class="text-center">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <% if(exams && exams.length> 0) { %>
+                                                            <% exams.forEach((exam, index)=> { %>
+                                                                <tr>
+                                                                    <td>
+                                                                        <%= index + 1 %>
+                                                                    </td>
+                                                                    <td class="fw-semibold text-truncate"
+                                                                        style="max-width: 200px;"
+                                                                        title="<%= exam.title %>">
+                                                                        <%= exam.title %>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%= exam.duration %> mins
+                                                                    </td>
+                                                                    <td>
+                                                                        <%= exam.passingMarks %>
+                                                                    </td>
+                                                                    <td>
+                                                                        <% if(exam.status==='Active' ) { %>
+                                                                            <span class="badge bg-success"><i
+                                                                                    class="bi bi-check-circle"></i>
+                                                                                Active</span>
+                                                                            <% } else if(exam.status==='Draft' ) { %>
+                                                                                <span
+                                                                                    class="badge bg-secondary">Draft</span>
+                                                                                <% } else { %>
+                                                                                    <span
+                                                                                        class="badge bg-danger">Completed</span>
+                                                                                    <% } %>
+                                                                    </td>
+                                                                    <% if(locals.user && locals.user.role==='SuperAdmin'
+                                                                        ) { %>
+                                                                        <td>
+                                                                            <%= exam.examinerDetails ?
+                                                                                exam.examinerDetails.name : 'Unknown' %>
+                                                                        </td>
+                                                                        <% } %>
+                                                                            <td class="text-center">
+                                                                                <a href="/admin/questions/exam/<%= exam._id %>"
+                                                                                    class="btn btn-sm btn-outline-info me-1"
+                                                                                    title="Manage Questions">
+                                                                                    <i class="bi bi-list-task"></i>
+                                                                                </a>
+                                                                                <a href="/admin/exams/edit/<%= exam._id %>"
+                                                                                    class="btn btn-sm btn-outline-primary me-1"
+                                                                                    title="Edit Exam">
+                                                                                    <i class="bi bi-pencil-square"></i>
+                                                                                </a>
+                                                                                <form
+                                                                                    action="/admin/exams/delete/<%= exam._id %>"
+                                                                                    method="POST" class="d-inline"
+                                                                                    onsubmit="return confirm('Are you sure you want to delete this exam?');">
+                                                                                    <button type="submit"
+                                                                                        class="btn btn-sm btn-outline-danger"
+                                                                                        title="Delete Exam"><i
+                                                                                            class="bi bi-trash"></i></button>
+                                                                                </form>
+                                                                            </td>
+                                                                </tr>
+                                                                <% }) %>
+                                                                    <% } else { %>
+                                                                        <tr>
+                                                                            <td colspan="7"
+                                                                                class="text-center text-muted py-4">No
+                                                                                exams found. Create your first exam!
+                                                                            </td>
+                                                                        </tr>
+                                                                        <% } %>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                </main>
+        </div>
+    </div>
+
+    <%- include('../../layouts/footer') %>

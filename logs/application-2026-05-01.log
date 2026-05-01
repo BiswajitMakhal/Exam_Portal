@@ -1,0 +1,436 @@
+2026-05-01 02:57:30 [INFO]: Server running on http://localhost:3000
+2026-05-01 02:57:30 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 02:57:34 [INFO]: Incoming Request: POST /login
+2026-05-01 02:57:35 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 02:57:36 [INFO]: Incoming Request: GET /favicon.ico
+2026-05-01 02:57:36 [WARN]: 404 Not Found: GET /favicon.ico
+2026-05-01 02:57:44 [INFO]: Incoming Request: GET /admin/users
+2026-05-01 02:58:02 [INFO]: Incoming Request: GET /admin/users
+2026-05-01 02:58:03 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 02:58:15 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 02:58:15 [WARN]: 404 Not Found: GET /admin/results
+2026-05-01 02:58:23 [INFO]: Incoming Request: GET /admin/exams/create
+2026-05-01 02:58:26 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 02:58:34 [INFO]: Incoming Request: GET /admin/users
+2026-05-01 02:58:39 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 02:58:43 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 02:58:47 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 02:58:49 [INFO]: Incoming Request: GET /admin/users
+2026-05-01 02:58:50 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 02:58:52 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 02:58:54 [INFO]: Incoming Request: GET /admin/exams/create
+2026-05-01 03:00:18 [INFO]: Incoming Request: POST /admin/exams/create
+2026-05-01 03:00:18 [INFO]: Incoming Request: GET /admin/exams?success=ExamCreated
+2026-05-01 03:00:24 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 03:00:25 [WARN]: 404 Not Found: GET /admin/results
+2026-05-01 03:00:33 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 03:00:37 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:00:38 [INFO]: Incoming Request: GET /admin/users
+2026-05-01 03:00:43 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 03:00:44 [WARN]: 404 Not Found: GET /admin/results
+2026-05-01 03:00:52 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:00:52 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:01:12 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:01:12 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:04:02 [INFO]: Incoming Request: POST /admin/bulk/users
+2026-05-01 03:04:02 [INFO]: Incoming Request: GET /admin/users?error=NoValidUsersFound
+2026-05-01 03:04:11 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:04:15 [INFO]: Incoming Request: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 03:04:15 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\questions\list.ejs:17
+    15|                                 </h1>
+    16|                                 <p class="text-muted mb-0">Exam: <strong class="text-dark">
+ >> 17|                                         <%= exam ? exam.title : 'Unknown Exam' %>
+    18|                                     </strong></p>
+    19|                             </div>
+    20|                             <div class="btn-toolbar mb-2 mb-md-0 gap-2">
+
+exam is not defined 
+Stack: ReferenceError: E:\PRACTICE\Exam_Portal\views\admin\questions\list.ejs:17
+    15|                                 </h1>
+    16|                                 <p class="text-muted mb-0">Exam: <strong class="text-dark">
+ >> 17|                                         <%= exam ? exam.title : 'Unknown Exam' %>
+    18|                                     </strong></p>
+    19|                             </div>
+    20|                             <div class="btn-toolbar mb-2 mb-md-0 gap-2">
+
+exam is not defined
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\questions\\list.ejs":19:26)
+    at list (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\response.js:923:7)
+    at renderQuestionList (E:\PRACTICE\Exam_Portal\app\controllers\questionController.js:41:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-05-01 03:04:20 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 03:04:20 [WARN]: 404 Not Found: GET /admin/results
+2026-05-01 03:06:14 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:06:14 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:06:23 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:06:23 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:08:11 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:08:18 [INFO]: Incoming Request: GET /logout
+2026-05-01 03:08:18 [INFO]: Incoming Request: GET /login?success=Logged%20out%20successfully
+2026-05-01 03:08:34 [INFO]: Incoming Request: POST /login
+2026-05-01 03:08:35 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-01 03:09:01 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:09:01 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:09:43 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:09:43 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:09:44 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:09:44 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:10:06 [INFO]: Incoming Request: POST /login
+2026-05-01 03:10:06 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 03:10:07 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:10:07 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:10:16 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 03:10:16 [WARN]: 404 Not Found: GET /admin/results
+2026-05-01 03:10:16 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:10:16 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 03:10:51 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:10:52 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:10:54 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 03:10:54 [WARN]: 404 Not Found: GET /admin/results
+2026-05-01 03:11:31 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 03:11:32 [WARN]: 404 Not Found: GET /admin/results
+2026-05-01 03:12:35 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:12:36 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:12:37 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 03:12:37 [WARN]: 404 Not Found: GET /admin/results
+2026-05-01 03:16:16 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:16:16 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:16:19 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:16:19 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:16:26 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:16:26 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:16:31 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:16:31 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:16:35 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:16:35 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:16:38 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:16:38 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:16:45 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:16:45 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:16:53 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:16:53 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:21:17 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:21:17 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:21:19 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:21:19 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:21:21 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:21:22 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:21:30 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:21:30 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:21:32 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:21:32 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:21:39 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:21:39 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:22:00 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:22:00 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:22:21 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:22:23 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 03:22:27 [INFO]: Incoming Request: GET /admin/results/69f2fee2ad4ff835277fc0aa
+2026-05-01 03:23:10 [INFO]: Incoming Request: GET /logout
+2026-05-01 03:23:10 [INFO]: Incoming Request: GET /login?success=Logged%20out%20successfully
+2026-05-01 03:23:24 [INFO]: Incoming Request: POST /login
+2026-05-01 03:23:24 [INFO]: Incoming Request: GET /login?error=Invalid%20Credentials
+2026-05-01 03:23:43 [INFO]: Incoming Request: POST /login
+2026-05-01 03:23:43 [INFO]: Incoming Request: GET /login?error=Invalid%20Credentials
+2026-05-01 03:24:03 [INFO]: Incoming Request: POST /login
+2026-05-01 03:24:03 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-01 03:24:07 [INFO]: Incoming Request: GET /student/exam/live/69f2fee2ad4ff835277fc0aa
+2026-05-01 03:24:07 [WARN]: 404 Not Found: GET /student/exam/live/69f2fee2ad4ff835277fc0aa
+2026-05-01 03:25:19 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:25:19 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:31:54 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:31:54 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:36:02 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:36:02 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:36:10 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:36:10 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:36:16 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:36:16 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:36:20 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:36:20 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:36:27 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:36:27 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:36:33 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:36:33 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:36:58 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:36:58 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:37:05 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:37:05 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:37:09 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:37:09 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:37:11 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:37:11 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:37:15 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:37:15 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:37:18 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:37:18 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:37:26 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:37:26 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:37:36 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-01 03:37:41 [INFO]: Incoming Request: GET /student/exam/live/69f3c9ea2956d30f09d6933d
+2026-05-01 03:37:52 [INFO]: Incoming Request: GET /student/exam/live/69f2fee2ad4ff835277fc0aa
+2026-05-01 03:41:52 [INFO]: Incoming Request: GET /logout
+2026-05-01 03:41:52 [INFO]: Incoming Request: GET /login?success=Logged%20out%20successfully
+2026-05-01 03:42:29 [INFO]: Incoming Request: POST /login
+2026-05-01 03:42:29 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 03:42:36 [INFO]: Incoming Request: GET /admin/users
+2026-05-01 03:42:39 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:42:41 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 03:42:46 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:42:51 [INFO]: Incoming Request: GET /admin/exams/create
+2026-05-01 03:43:01 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 03:44:04 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 03:44:06 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 03:44:09 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:44:12 [INFO]: Incoming Request: GET /admin/exams/create
+2026-05-01 03:44:17 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:44:24 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 03:44:30 [INFO]: Incoming Request: GET /admin/exams/create
+2026-05-01 03:44:41 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:44:45 [INFO]: Incoming Request: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 03:44:45 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\questions\list.ejs:17
+    15|                                 </h1>
+    16|                                 <p class="text-muted mb-0">Exam: <strong class="text-dark">
+ >> 17|                                         <%= exam ? exam.title : 'Unknown Exam' %>
+    18|                                     </strong></p>
+    19|                             </div>
+    20|                             <div class="btn-toolbar mb-2 mb-md-0 gap-2">
+
+exam is not defined 
+Stack: ReferenceError: E:\PRACTICE\Exam_Portal\views\admin\questions\list.ejs:17
+    15|                                 </h1>
+    16|                                 <p class="text-muted mb-0">Exam: <strong class="text-dark">
+ >> 17|                                         <%= exam ? exam.title : 'Unknown Exam' %>
+    18|                                     </strong></p>
+    19|                             </div>
+    20|                             <div class="btn-toolbar mb-2 mb-md-0 gap-2">
+
+exam is not defined
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\questions\\list.ejs":19:26)
+    at list (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\response.js:923:7)
+    at renderQuestionList (E:\PRACTICE\Exam_Portal\app\controllers\questionController.js:41:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-05-01 03:53:49 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:53:49 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:53:52 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:53:52 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:53:55 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:53:55 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:53:59 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:53:59 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:54:02 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:54:02 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:54:09 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:54:13 [INFO]: Incoming Request: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 03:54:15 [INFO]: Incoming Request: GET /admin/questions/create/69f2fee2ad4ff835277fc0aa
+2026-05-01 03:54:27 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 03:54:31 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 03:55:35 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 03:55:37 [INFO]: Incoming Request: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 03:55:41 [INFO]: Incoming Request: GET /admin/questions/create/69f2fee2ad4ff835277fc0aa
+2026-05-01 03:57:56 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:57:56 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:58:01 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:58:01 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:58:06 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:58:06 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:58:10 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:58:10 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:58:13 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:58:13 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:58:15 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:58:15 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:58:18 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:58:18 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:58:39 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:58:39 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:58:42 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:58:42 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:58:45 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:58:45 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:58:48 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:58:48 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:58:50 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:58:50 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:58:58 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:58:58 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 03:59:09 [INFO]: Server running on http://localhost:3000
+2026-05-01 03:59:09 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 04:00:26 [INFO]: Incoming Request: GET /admin/questions/create/69f2fee2ad4ff835277fc0aa
+2026-05-01 04:00:26 [WARN]: 404 Not Found: GET /admin/questions/create/69f2fee2ad4ff835277fc0aa
+2026-05-01 04:00:29 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 04:00:30 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 04:00:31 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 04:00:34 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 04:00:37 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 04:00:39 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 04:00:41 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 04:00:43 [INFO]: Incoming Request: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 04:00:43 [WARN]: 404 Not Found: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 04:02:01 [INFO]: Incoming Request: GET /login
+2026-05-01 04:02:02 [INFO]: Incoming Request: GET /login
+2026-05-01 04:02:04 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 04:02:07 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 04:02:09 [INFO]: Incoming Request: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 04:02:10 [WARN]: 404 Not Found: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 04:03:56 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 04:03:59 [INFO]: Incoming Request: GET /admin/exams/edit/69f2fee2ad4ff835277fc0aa
+2026-05-01 04:04:02 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 04:04:04 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 04:04:06 [INFO]: Incoming Request: GET /admin/results/69f3c9ea2956d30f09d6933d
+2026-05-01 04:04:08 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 04:04:09 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 04:04:12 [INFO]: Incoming Request: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 04:04:12 [WARN]: 404 Not Found: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 04:04:17 [INFO]: Incoming Request: GET /admin/questions/exam/69f3c9ea2956d30f09d6933d
+2026-05-01 04:04:17 [WARN]: 404 Not Found: GET /admin/questions/exam/69f3c9ea2956d30f09d6933d
+2026-05-01 04:05:14 [INFO]: Server running on http://localhost:3000
+2026-05-01 04:05:14 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 04:05:41 [INFO]: Server running on http://localhost:3000
+2026-05-01 04:05:41 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 04:05:54 [INFO]: Server running on http://localhost:3000
+2026-05-01 04:05:54 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 04:05:59 [INFO]: Server running on http://localhost:3000
+2026-05-01 04:05:59 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 04:06:05 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 04:06:07 [INFO]: Incoming Request: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 04:06:25 [INFO]: Incoming Request: GET /admin/questions/create/69f2fee2ad4ff835277fc0aa
+2026-05-01 04:06:31 [INFO]: Incoming Request: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 04:06:48 [INFO]: Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 04:06:48 [WARN]: 404 Not Found: GET /.well-known/appspecific/com.chrome.devtools.json
+2026-05-01 04:07:16 [INFO]: Server running on http://localhost:3000
+2026-05-01 04:07:16 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 22:22:44 [INFO]: Server running on http://localhost:3000
+2026-05-01 22:22:44 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 22:22:47 [INFO]: Incoming Request: GET /favicon.ico
+2026-05-01 22:22:47 [WARN]: 404 Not Found: GET /favicon.ico
+2026-05-01 22:22:49 [INFO]: Incoming Request: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 22:22:51 [INFO]: Incoming Request: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 22:22:54 [INFO]: Incoming Request: GET /admin/questions/create/69f2fee2ad4ff835277fc0aa
+2026-05-01 22:23:07 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 22:23:12 [INFO]: Incoming Request: GET /admin/exams/create
+2026-05-01 22:23:49 [INFO]: Incoming Request: POST /admin/exams/create
+2026-05-01 22:23:49 [INFO]: Incoming Request: GET /admin/exams?success=ExamCreated
+2026-05-01 22:23:55 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4
+2026-05-01 22:24:11 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 22:24:11 [ERROR]: Error in bulk upload: csv is not defined
+2026-05-01 22:24:11 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 22:24:56 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 22:24:56 [ERROR]: Error in bulk upload: csv is not defined
+2026-05-01 22:24:56 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 22:29:35 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 22:29:35 [ERROR]: Error in bulk upload: csv is not defined
+2026-05-01 22:29:35 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 22:30:05 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 22:30:06 [ERROR]: Error in bulk upload: csv is not defined
+2026-05-01 22:30:06 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 22:32:05 [INFO]: Server running on http://localhost:3000
+2026-05-01 22:32:05 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 22:32:51 [INFO]: Server running on http://localhost:3000
+2026-05-01 22:32:51 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 22:32:56 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 22:33:08 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 22:33:08 [ERROR]: Error in bulk upload: csv is not defined
+2026-05-01 22:33:08 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 22:36:33 [INFO]: Server running on http://localhost:3000
+2026-05-01 22:36:33 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 22:37:17 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 22:37:27 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 22:37:28 [ERROR]: Error in bulk upload: Question validation failed: correctOption: Correct option is required, questionText: Question text is required
+2026-05-01 22:37:28 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 22:38:30 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 22:38:34 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4
+2026-05-01 23:23:14 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4
+2026-05-01 23:29:16 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 23:29:16 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=CSV%20is%20empty%20or%20invalid%20format
+2026-05-01 23:30:48 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=CSV%20is%20empty%20or%20invalid%20format
+2026-05-01 23:30:59 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 23:30:59 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=CSV%20is%20empty%20or%20invalid%20format
+2026-05-01 23:36:11 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=CSV%20is%20empty%20or%20invalid%20format
+2026-05-01 23:36:12 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=CSV%20is%20empty%20or%20invalid%20format
+2026-05-01 23:36:18 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=CSV%20is%20empty%20or%20invalid%20format
+2026-05-01 23:36:31 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 23:36:31 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=CSV%20is%20empty%20or%20invalid%20format
+2026-05-01 23:36:37 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=CSV%20is%20empty%20or%20invalid%20format
+2026-05-01 23:40:40 [INFO]: Server running on http://localhost:3000
+2026-05-01 23:40:40 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 23:40:54 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=CSV%20is%20empty%20or%20invalid%20format
+2026-05-01 23:40:55 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 23:40:59 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:41:02 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4
+2026-05-01 23:41:11 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 23:41:12 [ERROR]: Error in bulk upload: Question validation failed: correctOption: Correct option is required
+2026-05-01 23:41:12 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 23:42:34 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 23:42:35 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 23:42:35 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 23:42:36 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 23:42:44 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 23:42:44 [ERROR]: Error in bulk upload: Question validation failed: correctOption: Correct option is required
+2026-05-01 23:42:44 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 23:42:47 [INFO]: Incoming Request: GET /admin/questions/create/69f4da9de1f216040a0ec5f4
+2026-05-01 23:44:39 [INFO]: Server running on http://localhost:3000
+2026-05-01 23:44:39 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 23:44:51 [INFO]: Server running on http://localhost:3000
+2026-05-01 23:44:51 [INFO]: Swagger Docs available at http://localhost:3000/api-docs
+2026-05-01 23:45:00 [INFO]: Incoming Request: GET /admin/questions/create/69f4da9de1f216040a0ec5f4
+2026-05-01 23:45:03 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:45:06 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4
+2026-05-01 23:45:16 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 23:45:16 [ERROR]: Error in bulk upload: Question validation failed: correctOption: Correct option is required
+2026-05-01 23:45:16 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?error=Failed%20to%20process%20CSV%20file
+2026-05-01 23:50:25 [INFO]: Incoming Request: POST /admin/questions/bulk-upload/69f4da9de1f216040a0ec5f4
+2026-05-01 23:50:25 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4?success=40%20Questions%20added%20successfully%20via%20CSV!
+2026-05-01 23:50:40 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 23:50:44 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:50:48 [INFO]: Incoming Request: GET /admin/exams/edit/69f2fee2ad4ff835277fc0aa
+2026-05-01 23:50:54 [INFO]: Incoming Request: GET /admin/questions/exam/69f2fee2ad4ff835277fc0aa
+2026-05-01 23:50:56 [INFO]: Incoming Request: GET /admin/questions/create/69f2fee2ad4ff835277fc0aa
+2026-05-01 23:50:58 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:51:02 [INFO]: Incoming Request: GET /admin/questions/exam/69f4da9de1f216040a0ec5f4
+2026-05-01 23:51:11 [INFO]: Incoming Request: GET /logout
+2026-05-01 23:51:11 [INFO]: Incoming Request: GET /login?success=Logged%20out%20successfully
+2026-05-01 23:51:28 [INFO]: Incoming Request: POST /login
+2026-05-01 23:51:28 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-01 23:51:34 [INFO]: Incoming Request: GET /student/exam/live/69f4da9de1f216040a0ec5f4
+2026-05-01 23:52:02 [INFO]: Incoming Request: POST /student/exam/submit
+2026-05-01 23:52:02 [INFO]: Incoming Request: GET /student/exam/success/69f4ef4aaccb5374ad729560
+2026-05-01 23:52:10 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-01 23:52:19 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-01 23:53:59 [INFO]: Incoming Request: GET /logout
+2026-05-01 23:53:59 [INFO]: Incoming Request: GET /login?success=Logged%20out%20successfully
+2026-05-01 23:54:19 [INFO]: Incoming Request: GET /login
+2026-05-01 23:54:32 [INFO]: Incoming Request: POST /login
+2026-05-01 23:54:32 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 23:54:40 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-01 23:54:42 [INFO]: Incoming Request: GET /student/dashboard
+2026-05-01 23:54:53 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:55:00 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:55:03 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:55:09 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:55:14 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:55:17 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 23:55:20 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:55:22 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 23:55:25 [INFO]: Incoming Request: GET /admin/results/69f4da9de1f216040a0ec5f4
+2026-05-01 23:55:31 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:55:32 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 23:55:57 [INFO]: Incoming Request: GET /admin/dashboard
+2026-05-01 23:56:01 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:59:14 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:59:16 [INFO]: Incoming Request: GET /admin/results
+2026-05-01 23:59:18 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:59:20 [INFO]: Incoming Request: GET /admin/exams
+2026-05-01 23:59:21 [INFO]: Incoming Request: GET /admin/users

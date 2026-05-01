@@ -1,0 +1,72 @@
+<%- include('../../layouts/header') %>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <%- include('../../layouts/sidebar') %>
+
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light" style="min-height: 100vh;">
+                    <%- include('../../layouts/navbar') %>
+
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
+                            <h1 class="h3 fw-bold"><i class="bi bi-person-plus text-primary"></i> Add New User</h1>
+                            <a href="/admin/users" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-arrow-left"></i> Back to Users
+                            </a>
+                        </div>
+
+                        <!-- Error Message -->
+                        <% if (typeof error !=='undefined' && error) { %>
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                <%= error %>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                            <% } %>
+
+                                <div class="card shadow-sm border-0" style="max-width: 600px;">
+                                    <div class="card-body p-4">
+                                        <form action="/admin/users/create" method="POST">
+                                            <div class="mb-3">
+                                                <label class="form-label fw-semibold">Full Name <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" name="name" class="form-control" required
+                                                    placeholder="e.g. John Doe">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label fw-semibold">Email Address <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="email" name="email" class="form-control" required
+                                                    placeholder="e.g. john@example.com">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-label fw-semibold">Password <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="password" name="password" class="form-control" required
+                                                    placeholder="Create a strong password">
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <label class="form-label fw-semibold">Select Role <span
+                                                        class="text-danger">*</span></label>
+                                                <select name="role" class="form-select" required>
+                                                    <option value="" disabled selected>-- Choose Role --</option>
+                                                    <option value="Candidate">Candidate (Student)</option>
+                                                    <option value="Examiner">Examiner (Teacher)</option>
+                                                    <option value="SuperAdmin">Super Admin</option>
+                                                </select>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary w-100 fw-bold">
+                                                <i class="bi bi-person-check-fill"></i> Create User
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                </main>
+        </div>
+    </div>
+
+    <%- include('../../layouts/footer') %>

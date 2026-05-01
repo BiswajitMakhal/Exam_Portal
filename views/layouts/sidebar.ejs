@@ -1,0 +1,71 @@
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse shadow-sm"
+    style="min-height: 100vh; transition: all 0.3s;">
+    <div class="position-sticky pt-3">
+        
+        <!-- UPDATED LOGO SECTION: Wrapped in Anchor Tag -->
+        <div class="text-center mb-4 mt-2">
+            <a href="/admin/dashboard" class="text-white text-decoration-none d-block">
+                <h5 class="fw-bold mb-0"><i class="bi bi-laptop text-primary"></i> ExamPortal</h5>
+            </a>
+        </div>
+
+        <ul class="nav flex-column gap-2 px-2">
+            <li class="nav-item">
+                <a class="nav-link text-light rounded hover-bg-primary" href="/admin/dashboard">
+                    <i class="bi bi-grid-1x2-fill me-2"></i> Dashboard
+                </a>
+            </li>
+
+            <% if(locals.user && locals.user.role==='SuperAdmin' ) { %>
+                <li class="nav-item">
+                    <a class="nav-link text-light rounded hover-bg-primary" href="/admin/users">
+                        <i class="bi bi-people-fill me-2"></i> Manage Users
+                    </a>
+                </li>
+            <% } %>
+
+            <li class="nav-item">
+                <a class="nav-link text-light rounded hover-bg-primary" href="/admin/exams">
+                    <i class="bi bi-file-earmark-text-fill me-2"></i> Manage Exams
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-light rounded hover-bg-primary" href="/admin/results">
+                    <i class="bi bi-bar-chart-fill me-2"></i> Analytics / Results
+                </a>
+            </li>
+
+            <li class="nav-item mt-3">
+                <a class="nav-link text-light rounded bg-secondary bg-opacity-25" data-bs-toggle="collapse"
+                    href="#bulkUploadMenu" role="button">
+                    <i class="bi bi-cloud-upload-fill me-2"></i> Bulk Tools <i
+                        class="bi bi-chevron-down float-end mt-1"></i>
+                </a>
+                <div class="collapse" id="bulkUploadMenu">
+                    <ul class="nav flex-column ms-3 mt-2">
+                        <% if(locals.user && locals.user.role==='SuperAdmin' ) { %>
+                            <li class="nav-item">
+                                <a class="nav-link text-light small" href="/admin/users">
+                                    <i class="bi bi-dot"></i> Upload Candidates
+                                </a>
+                            </li>
+                        <% } %>
+                        <li class="nav-item">
+                            <a class="nav-link text-light small" href="/admin/exams">
+                                <i class="bi bi-dot"></i> Upload Questions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    .hover-bg-primary:hover {
+        background-color: #0d6efd;
+        color: white !important;
+    }
+</style>

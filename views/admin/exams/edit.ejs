@@ -1,0 +1,77 @@
+<%- include('../../layouts/header') %>
+
+    <div class="container-fluid">
+        <div class="row">
+            <%- include('../../layouts/sidebar') %>
+
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light" style="min-height: 100vh;">
+                    <%- include('../../layouts/navbar') %>
+
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-4 border-bottom">
+                            <h1 class="h3 fw-bold"><i class="bi bi-pencil-square text-primary"></i> Edit Exam</h1>
+                            <a href="/admin/exams" class="btn btn-sm btn-outline-secondary"><i
+                                    class="bi bi-arrow-left"></i> Back to List</a>
+                        </div>
+
+                        <% if (typeof error !=='undefined' && error) { %>
+                            <div class="alert alert-danger">
+                                <%= error %>
+                            </div>
+                            <% } %>
+
+                                <div class="card p-4 shadow-sm border-0 col-lg-8 mb-4">
+                                    <form action="/admin/exams/edit/<%= exam._id %>" method="POST">
+                                        <div class="mb-3">
+                                            <label for="title" class="form-label fw-semibold">Exam Title <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="title" name="title"
+                                                value="<%= exam.title %>" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="description" class="form-label fw-semibold">Description</label>
+                                            <textarea class="form-control" id="description" name="description"
+                                                rows="3"><%= exam.description %></textarea>
+                                        </div>
+
+                                        <div class="row g-3 mb-3">
+                                            <div class="col-12 col-md-4">
+                                                <label for="duration" class="form-label fw-semibold">Duration (Minutes)
+                                                    <span class="text-danger">*</span></label>
+                                                <input type="number" class="form-control" id="duration" name="duration"
+                                                    value="<%= exam.duration %>" min="1" required>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label for="passingMarks" class="form-label fw-semibold">Passing Marks
+                                                    <span class="text-danger">*</span></label>
+                                                <input type="number" class="form-control" id="passingMarks"
+                                                    name="passingMarks" value="<%= exam.passingMarks %>" min="1"
+                                                    required>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label for="status" class="form-label fw-semibold">Status <span
+                                                        class="text-danger">*</span></label>
+                                                <select class="form-select" id="status" name="status" required>
+                                                    <option value="Draft" <%=exam.status==='Draft' ? 'selected' : '' %>
+                                                        >Draft</option>
+                                                    <option value="Active" <%=exam.status==='Active' ? 'selected' : ''
+                                                        %>>Active</option>
+                                                    <option value="Completed" <%=exam.status==='Completed' ? 'selected'
+                                                        : '' %>>Completed</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-4">
+                                            <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i>
+                                                Update Exam</button>
+                                            <a href="/admin/exams" class="btn btn-light border ms-2">Cancel</a>
+                                        </div>
+                                    </form>
+                                </div>
+                </main>
+        </div>
+    </div>
+
+    <%- include('../../layouts/footer') %>

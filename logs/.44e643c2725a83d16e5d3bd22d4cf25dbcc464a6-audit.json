@@ -1,0 +1,40 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "E:\\PRACTICE\\Exam_Portal\\logs\\.44e643c2725a83d16e5d3bd22d4cf25dbcc464a6-audit.json",
+    "files": [
+        {
+            "date": 1777146670692,
+            "name": "E:\\PRACTICE\\Exam_Portal\\logs\\error-2026-04-26.log",
+            "hash": "ff4eef05ee51c30e35b4c0dabfd30323dc896bde332b9aa43c4888679154d9eb"
+        },
+        {
+            "date": 1777325928270,
+            "name": "E:\\PRACTICE\\Exam_Portal\\logs\\error-2026-04-28.log",
+            "hash": "fd69a15d832fceebfc63f56ffc149571579c0ca9f64bf576c2967ad334edc08b"
+        },
+        {
+            "date": 1777409019595,
+            "name": "E:\\PRACTICE\\Exam_Portal\\logs\\error-2026-04-29.log",
+            "hash": "1e609617d5b4fce8ef38ba0452dd1f08e688f31351cc8a02dcfb54d41d2cf4f0"
+        },
+        {
+            "date": 1777495125862,
+            "name": "E:\\PRACTICE\\Exam_Portal\\logs\\error-2026-04-30.log",
+            "hash": "31bc9e4a7984310b04fb68a2d672b5bb911e92ecfd3c47fd0957fff87f8e6080"
+        },
+        {
+            "date": 1777584449458,
+            "name": "E:\\PRACTICE\\Exam_Portal\\logs\\error-2026-05-01.log",
+            "hash": "b024911505ebcf9a8ce491cd55c06d5bf6ba69cef8319900c1cb6b4551d53b14"
+        },
+        {
+            "date": 1777660217595,
+            "name": "E:\\PRACTICE\\Exam_Portal\\logs\\error-2026-05-02.log",
+            "hash": "81305d7ee9999f88a18c281042d4fa56165e6e274622252d6d086eb2c4cc31c4"
+        }
+    ],
+    "hashType": "sha256"
+}

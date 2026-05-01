@@ -1,0 +1,65 @@
+2026-05-01 03:04:15 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\questions\list.ejs:17
+    15|                                 </h1>
+    16|                                 <p class="text-muted mb-0">Exam: <strong class="text-dark">
+ >> 17|                                         <%= exam ? exam.title : 'Unknown Exam' %>
+    18|                                     </strong></p>
+    19|                             </div>
+    20|                             <div class="btn-toolbar mb-2 mb-md-0 gap-2">
+
+exam is not defined 
+Stack: ReferenceError: E:\PRACTICE\Exam_Portal\views\admin\questions\list.ejs:17
+    15|                                 </h1>
+    16|                                 <p class="text-muted mb-0">Exam: <strong class="text-dark">
+ >> 17|                                         <%= exam ? exam.title : 'Unknown Exam' %>
+    18|                                     </strong></p>
+    19|                             </div>
+    20|                             <div class="btn-toolbar mb-2 mb-md-0 gap-2">
+
+exam is not defined
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\questions\\list.ejs":19:26)
+    at list (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\response.js:923:7)
+    at renderQuestionList (E:\PRACTICE\Exam_Portal\app\controllers\questionController.js:41:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-05-01 03:44:45 [ERROR]: Server Error: E:\PRACTICE\Exam_Portal\views\admin\questions\list.ejs:17
+    15|                                 </h1>
+    16|                                 <p class="text-muted mb-0">Exam: <strong class="text-dark">
+ >> 17|                                         <%= exam ? exam.title : 'Unknown Exam' %>
+    18|                                     </strong></p>
+    19|                             </div>
+    20|                             <div class="btn-toolbar mb-2 mb-md-0 gap-2">
+
+exam is not defined 
+Stack: ReferenceError: E:\PRACTICE\Exam_Portal\views\admin\questions\list.ejs:17
+    15|                                 </h1>
+    16|                                 <p class="text-muted mb-0">Exam: <strong class="text-dark">
+ >> 17|                                         <%= exam ? exam.title : 'Unknown Exam' %>
+    18|                                     </strong></p>
+    19|                             </div>
+    20|                             <div class="btn-toolbar mb-2 mb-md-0 gap-2">
+
+exam is not defined
+    at eval ("E:\\PRACTICE\\Exam_Portal\\views\\admin\\questions\\list.ejs":19:26)
+    at list (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:632:23)
+    at tryHandleCache (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:253:42)
+    at ejs.renderFile [as engine] (E:\PRACTICE\Exam_Portal\node_modules\ejs\lib\cjs\ejs.js:444:12)
+    at View.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\view.js:139:8)
+    at tryRender (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:627:10)
+    at Function.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (E:\PRACTICE\Exam_Portal\node_modules\express\lib\response.js:923:7)
+    at renderQuestionList (E:\PRACTICE\Exam_Portal\app\controllers\questionController.js:41:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-05-01 22:24:11 [ERROR]: Error in bulk upload: csv is not defined
+2026-05-01 22:24:56 [ERROR]: Error in bulk upload: csv is not defined
+2026-05-01 22:29:35 [ERROR]: Error in bulk upload: csv is not defined
+2026-05-01 22:30:06 [ERROR]: Error in bulk upload: csv is not defined
+2026-05-01 22:33:08 [ERROR]: Error in bulk upload: csv is not defined
+2026-05-01 22:37:28 [ERROR]: Error in bulk upload: Question validation failed: correctOption: Correct option is required, questionText: Question text is required
+2026-05-01 23:41:12 [ERROR]: Error in bulk upload: Question validation failed: correctOption: Correct option is required
+2026-05-01 23:42:44 [ERROR]: Error in bulk upload: Question validation failed: correctOption: Correct option is required
+2026-05-01 23:45:16 [ERROR]: Error in bulk upload: Question validation failed: correctOption: Correct option is required

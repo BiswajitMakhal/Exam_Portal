@@ -1,0 +1,77 @@
+<%- include('../../layouts/header') %>
+
+<div class="container-fluid">
+    <div class="row">
+        <%- include('../../layouts/sidebar') %>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light" style="min-height: 100vh;">
+            <%- include('../../layouts/navbar') %>
+
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-4 border-bottom">
+                <div>
+                    <h1 class="h3 fw-bold"><i class="bi bi-trophy-fill text-warning me-2"></i> Scoreboard</h1>
+                    <p class="text-muted mb-0">Exam: <strong class="text-dark"><%= exam.title %></strong> | Passing Marks: <strong class="text-danger"><%= exam.passingMarks %></strong></p>
+                </div>
+                <a href="/admin/exams" class="btn btn-sm btn-outline-secondary"><i class="bi bi-arrow-left"></i> Back to Exams</a>
+            </div>
+
+            <div class="card p-0 shadow-sm border-0 mb-4">
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped align-middle mb-0">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th class="ps-3">Rank</th>
+                                    <th>Candidate Name</th>
+                                    <th>Email</th>
+                                    <th class="text-center">Score</th>
+                                    <th class="text-center">Status</th>
+                                    <th class="text-end pe-3">Completed On</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% if(results && results.length > 0) { %>
+                                    <% results.forEach((res, index) => { %>
+                                    <tr>
+                                        <!-- Rank logic (1st, 2nd, 3rd get special colors) -->
+                                        <td class="ps-3 fw-bold">
+                                            <% if(index === 0) { %> <span class="text-warning fs-5"><i class="bi bi-medal-fill"></i> 1</span>
+                                            <% } else if(index === 1) { %> <span class="text-secondary fs-5"><i class="bi bi-medal-fill"></i> 2</span>
+                                            <% } else if(index === 2) { %> <span style="color: #cd7f32;" class="fs-5"><i class="bi bi-medal-fill"></i> 3</span>
+                                            <% } else { %> <%= index + 1 %> <% } %>
+                                        </td>
+                                        <td class="fw-semibold"><%= res.candidateDetails.name %></td>
+                                        <td><%= res.candidateDetails.email %></td>
+                                        <td class="text-center fw-bold fs-6 text-primary">
+                                            <%= res.score %> / <%= res.totalMarks %>
+                                        </td>
+                                        <td class="text-center">
+                                            <% if(res.isPassed) { %>
+                                                <span class="badge bg-success rounded-pill px-3 py-2">Passed</span>
+                                            <% } else { %>
+                                                <span class="badge bg-danger rounded-pill px-3 py-2">Failed</span>
+                                            <% } %>
+                                        </td>
+                                        <td class="text-end pe-3 text-muted small">
+                                            <%= new Date(res.completedAt).toLocaleString() %>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                                <% } else { %>
+                                    <tr>
+                                        <td colspan="6" class="text-center text-muted py-5">
+                                            <i class="bi bi-emoji-frown fs-1 d-block mb-2"></i>
+                                            No candidate has completed this exam yet.
+                                        </td>
+                                    </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<%- include('../../layouts/footer') %>
