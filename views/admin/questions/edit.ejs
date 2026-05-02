@@ -1,98 +1,80 @@
 <%- include('../../layouts/header') %>
 
-    <div class="container-fluid">
-        <div class="row">
-            <%- include('../../layouts/sidebar') %>
+<div class="container-fluid">
+    <div class="row">
+        <%- include('../../layouts/sidebar') %>
 
-                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light" style="min-height: 100vh;">
-                    <%- include('../../layouts/navbar') %>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light" style="min-height: 100vh;">
+            <%- include('../../layouts/navbar') %>
 
-                        <div
-                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-4 border-bottom">
-                            <h1 class="h3 fw-bold"><i class="bi bi-pencil-square text-primary"></i> Edit Question</h1>
-                            <a href="/admin/questions/exam/<%= question.examId %>"
-                                class="btn btn-sm btn-outline-secondary"><i class="bi bi-arrow-left"></i> Back to
-                                Questions</a>
-                        </div>
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-4 border-bottom">
+                <h1 class="h3 fw-bold"><i class="bi bi-pencil-square text-primary"></i> Edit Question</h1>
+                <a href="/admin/questions/exam/<%= question.examId %>" class="btn btn-sm btn-outline-secondary"><i class="bi bi-arrow-left"></i> Back to Questions</a>
+            </div>
 
-                        <% if (typeof error !=='undefined' && error) { %>
-                            <div class="alert alert-danger">
-                                <%= error %>
+            <% if (typeof error !== 'undefined' && error) { %>
+                <div class="alert alert-danger">
+                    <%= error %>
+                </div>
+            <% } %>
+
+            <div class="card p-4 shadow-sm border-0 col-lg-8 mb-4">
+                <form action="/admin/questions/edit/<%= question._id %>" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="examId" value="<%= question.examId %>">
+
+                    <div class="mb-3">
+                        <label for="questionText" class="form-label fw-semibold">Question Text <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="questionText" name="questionText" rows="3" required><%= question.questionText %></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="image" class="form-label fw-semibold">Reference Image (Update Optional)</label>
+                        <% if(question.imageUrl) { %>
+                            <div class="mb-2">
+                                <img src="<%= question.imageUrl %>" alt="Current Image" class="img-thumbnail" style="max-height: 150px;">
+                                <div class="form-text text-warning">Uploading a new image will replace this one.</div>
                             </div>
-                            <% } %>
+                        <% } %>
+                        <input class="form-control" type="file" id="image" name="image" accept="image/*">
+                    </div>
 
-                                <div class="card p-4 shadow-sm border-0 col-lg-8 mb-4">
-                                    <form action="/admin/questions/edit/<%= question._id %>" method="POST"
-                                        enctype="multipart/form-data">
-                                        <input type="hidden" name="examId" value="<%= question.examId %>">
+                    <h5 class="fw-bold border-bottom pb-2 mb-3">Options & Answer</h5>
+                    <div class="row g-3 mb-3">
+                        <% question.options.forEach((opt, idx) => { %>
+                            <div class="col-md-6">
+                                <label class="form-label">Option <%= idx + 1 %> <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="options" value="<%= opt %>" required>
+                            </div>
+                        <% }) %>
 
-                                        <div class="mb-3">
-                                            <label for="questionText" class="form-label fw-semibold">Question Text <span
-                                                    class="text-danger">*</span></label>
-                                            <textarea class="form-control" id="questionText" name="questionText"
-                                                rows="3" required><%= question.questionText %></textarea>
-                                        </div>
+                        <!-- Fallback in case options array has fewer than 4 elements -->
+                        <% for(let i = question.options.length; i < 4; i++) { %>
+                            <div class="col-md-6">
+                                <label class="form-label">Option <%= i + 1 %> <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="options" required>
+                            </div>
+                        <% } %>
+                    </div>
 
-                                        <div class="mb-4">
-                                            <label for="image" class="form-label fw-semibold">Reference Image (Update
-                                                Optional)</label>
-                                            <% if(question.imageUrl) { %>
-                                                <div class="mb-2">
-                                                    <img src="<%= question.imageUrl %>" alt="Current Image"
-                                                        class="img-thumbnail" style="max-height: 150px;">
-                                                    <div class="form-text text-warning">Uploading a new image will
-                                                        replace this one.</div>
-                                                </div>
-                                                <% } %>
-                                                    <input class="form-control" type="file" id="image" name="image"
-                                                        accept="image/*">
-                                        </div>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <!-- EKHANE CHANGE KORA HOLO: correctAnswer er bodole correctOption -->
+                            <label for="correctOption" class="form-label fw-semibold">Correct Answer <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="correctOption" name="correctOption" value="<%= question.correctOption || question.correctAnswer || '' %>" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="marks" class="form-label fw-semibold">Marks <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" id="marks" name="marks" value="<%= question.marks %>" min="1" required>
+                        </div>
+                    </div>
 
-                                        <h5 class="fw-bold border-bottom pb-2 mb-3">Options & Answer</h5>
-                                        <div class="row g-3 mb-3">
-                                            <% question.options.forEach((opt, idx)=> { %>
-                                                <div class="col-md-6">
-                                                    <label class="form-label">Option <%= idx + 1 %> <span
-                                                                class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" name="options"
-                                                        value="<%= opt %>" required>
-                                                </div>
-                                                <% }) %>
-
-                                                    <!-- Fallback in case options array has fewer than 4 elements -->
-                                                    <% for(let i=question.options.length; i < 4; i++) { %>
-                                                        <div class="col-md-6">
-                                                            <label class="form-label">Option <%= i + 1 %> <span
-                                                                        class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" name="options"
-                                                                required>
-                                                        </div>
-                                                        <% } %>
-                                        </div>
-
-                                        <div class="row g-3 mb-4">
-                                            <div class="col-md-6">
-                                                <label for="correctAnswer" class="form-label fw-semibold">Correct Answer
-                                                    <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" id="correctAnswer"
-                                                    name="correctAnswer" value="<%= question.correctAnswer %>" required>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="marks" class="form-label fw-semibold">Marks <span
-                                                        class="text-danger">*</span></label>
-                                                <input type="number" class="form-control" id="marks" name="marks"
-                                                    value="<%= question.marks %>" min="1" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="mt-2">
-                                            <button type="submit" class="btn btn-primary px-4"><i
-                                                    class="bi bi-save"></i> Update Question</button>
-                                        </div>
-                                    </form>
-                                </div>
-                </main>
-        </div>
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn-primary px-4"><i class="bi bi-save"></i> Update Question</button>
+                    </div>
+                </form>
+            </div>
+        </main>
     </div>
+</div>
 
-    <%- include('../../layouts/footer') %>
+<%- include('../../layouts/footer') %>

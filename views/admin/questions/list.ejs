@@ -87,15 +87,16 @@
                                                                                 <%= q.questionText %>
                                                                             </div>
                                                                             <div class="small text-success mt-1">Ans:
-                                                                                <%= q.correctAnswer %>
+                                                                                <%= q.correctOption || q.correctAnswer
+                                                                                    %>
                                                                             </div>
                                                                         </td>
                                                                         <td><span class="badge bg-secondary">
                                                                                 <%= q.marks %> Marks
                                                                             </span></td>
-                                                                        <td class="text-end pe-3">
+                                                                        <td class="text-end d-flex pe-3">
                                                                             <a href="/admin/questions/edit/<%= q._id %>"
-                                                                                class="btn btn-sm btn-outline-primary"><i
+                                                                                class="btn question-edit-btn d-flex btn-sm btn-outline-primary me-2"><i
                                                                                     class="bi bi-pencil-square"></i>
                                                                                 Edit</a>
                                                                             <form
@@ -103,7 +104,7 @@
                                                                                 method="POST" class="d-inline"
                                                                                 onsubmit="return confirm('Delete this question?');">
                                                                                 <input type="hidden" name="examId"
-                                                                                    value="<%= exam._id %>">
+                                                                                    value="<%= exam ? exam._id : '' %>">
                                                                                 <button type="submit"
                                                                                     class="btn btn-sm btn-outline-danger"><i
                                                                                         class="bi bi-trash"></i></button>
@@ -139,12 +140,14 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
-                <form action="/admin/questions/bulk-upload/<%= exam._id %>" method="POST" enctype="multipart/form-data">
+                <form action="/admin/questions/bulk-upload/<%= exam ? exam._id : '' %>" method="POST"
+                    enctype="multipart/form-data">
                     <div class="modal-body p-4">
                         <div class="alert alert-info small mb-4">
+                            <!-- EIKHAN THEKEO correctAnswer ke correctOption kore dilam -->
                             <strong><i class="bi bi-info-circle"></i> Note:</strong> Ensure your CSV has the following
                             headers exactly: <br>
-                            <code>questionText, option1, option2, option3, option4, correctAnswer, marks</code>
+                            <code>questionText, option1, option2, option3, option4, correctOption, marks</code>
                         </div>
                         <div class="mb-3">
                             <label for="csvFile" class="form-label fw-semibold">Select CSV File <span

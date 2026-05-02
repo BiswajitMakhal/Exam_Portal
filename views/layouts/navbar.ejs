@@ -32,29 +32,46 @@
 </header>
 
 <style>
-   @media screen and (max-width:576px) {
 
-    /* Nav-bar */
-    .navbar{
-        padding: 4px 0px !important;
+    @media screen and (max-width:992px){
+         /* Manage Questions (questions-->list.ejs) */
+        .question-edit-btn {
+            gap: 2px;
+            margin-right: 4px;
+            font-size: 12px;
+            align-items: center;
+        }
+    } 
+    @media screen and (max-width:576px) {
+
+        /* Nav-bar */
+        .navbar {
+            padding: 4px 0px !important;
+        }
+
+        .navbar-toggler {
+            font-size: 13px !important;
+        }
+
+        .user-name {
+            font-size: 12px;
+        }
+
+        .badge {
+            font-size: 10px;
+        }
+
+        /* Analitycs and Results */
+        .card-body {
+            padding: 10px !important;
+        }
+
+        /* Scorboard */
+        .table-dark tr th {
+            font-size: 14px;
+            text-align: center !important;
+        }
+
+
     }
-    .navbar-toggler{
-        font-size: 13px !important;
-    }
-    .user-name{
-        font-size: 12px;
-    }
-    .badge{
-        font-size: 10px;
-    }
-    /* Analitycs and Results */
-    .card-body{
-        padding: 10px !important;
-    }
-    /* Scorboard */
-    .table-dark tr th {
-        font-size: 14px;
-        text-align: center !important;
-    }
-   }
 </style>

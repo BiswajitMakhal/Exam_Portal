@@ -42,7 +42,7 @@ class QuestionController {
 
   async createQuestion(req, res) {
     try {
-      const { examId, questionText, options, correctAnswer, marks } = req.body;
+      const { examId, questionText, options, correctOption, marks } = req.body;
 
       let imageUrl = null;
 
@@ -58,7 +58,7 @@ class QuestionController {
         examId,
         questionText,
         options: Array.isArray(options) ? options : [options],
-        correctAnswer,
+        correctOption,
         marks,
         imageUrl,
       });
@@ -92,12 +92,12 @@ class QuestionController {
   async updateQuestion(req, res) {
     try {
       const questionId = req.params.questionId;
-      const { examId, questionText, options, correctAnswer, marks } = req.body;
+      const { examId, questionText, options, correctOption, marks } = req.body;
 
       let updateData = {
         questionText,
         options: Array.isArray(options) ? options : [options],
-        correctAnswer,
+        correctOption,
         marks,
       };
 

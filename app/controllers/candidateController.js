@@ -102,7 +102,9 @@ class CandidateController {
         totalMarks,
         isPassed,
         status: "Completed",
+        completedAt: Date.now(),
       });
+
       try {
         const emailHtml = generateReportCardHTML(
           user.name,
