@@ -32,16 +32,27 @@
 </header>
 
 <style>
+    @media screen and (max-width:992px) {
 
-    @media screen and (max-width:992px){
-         /* Manage Questions (questions-->list.ejs) */
+        /* Manage Questions (questions-->list.ejs) */
+        .question-manage-btn {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            flex-wrap: nowrap;
+        }
+
         .question-edit-btn {
+            display: flex !important;
             gap: 2px;
             margin-right: 4px;
-            font-size: 12px;
+            font-size: 14px;
             align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
         }
-    } 
+    }
+
     @media screen and (max-width:576px) {
 
         /* Nav-bar */

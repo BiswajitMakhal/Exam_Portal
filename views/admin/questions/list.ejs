@@ -94,9 +94,10 @@
                                                                         <td><span class="badge bg-secondary">
                                                                                 <%= q.marks %> Marks
                                                                             </span></td>
-                                                                        <td class="text-end d-flex pe-3">
-                                                                            <a href="/admin/questions/edit/<%= q._id %>"
-                                                                                class="btn question-edit-btn d-flex btn-sm btn-outline-primary me-2"><i
+                                                                        <td class="text-end pe-3 " >
+                                                                           <div class="question-manage-btn">
+                                                                             <a href="/admin/questions/edit/<%= q._id %>"
+                                                                                class="btn question-edit-btn btn-sm btn-outline-primary me-2"><i
                                                                                     class="bi bi-pencil-square"></i>
                                                                                 Edit</a>
                                                                             <form
@@ -109,6 +110,7 @@
                                                                                     class="btn btn-sm btn-outline-danger"><i
                                                                                         class="bi bi-trash"></i></button>
                                                                             </form>
+                                                                           </div>
                                                                         </td>
                                                                     </tr>
                                                                     <% }) %>
