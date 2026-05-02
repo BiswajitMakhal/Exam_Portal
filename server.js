@@ -4,6 +4,7 @@ const http = require("http");
 const path = require("path");
 const cors = require("cors");
 const helmet = require("helmet");
+const rateLimit = require("express-rate-limit");
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
 
@@ -47,6 +48,25 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100,
+  message: "Too many requests from this IP, please try again after 15 minutes.",
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.use(limiter);
+
+const loginLimiter = rateLimit({
+  windowMs: 10 * 60 * 1000, // 10 minutes
+  max: 10,
+  message: "Too many login attempts, please try again after 10 minutes.",
+});
+
+app.use("/login", loginLimiter);
+app.use("/", loginLimiter);
+
 const swaggerOptions = {
   swaggerDefinition: {
     openapi: "3.0.0",
@@ -73,7 +93,6 @@ app.use("/admin/questions", questionRoutes);
 app.use("/admin/bulk", bulkRoutes);
 app.use("/admin/results", resultRoutes);
 app.use("/admin/dashboard", dashboardRoutes);
-
 
 app.use("/student", candidateRoutes);
 
