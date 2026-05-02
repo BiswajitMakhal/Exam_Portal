@@ -1,18 +1,17 @@
-### README.md
-
-```markdown
 # 🎓 Advanced Real-Time Exam Portal
 
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socket.io&logoColor=white)
-![EJS](https://img.shields.io/badge/EJS-B4CA65?style=for-the-badge&logo=ejs&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
+![EJS](https://img.shields.io/badge/EJS-B4CA65?style=for-the-badge)
 
 A secure, high-performance web application designed to evaluate candidates through timed, structured assessments. Inspired by platforms like TestGorilla, it features real-time monitoring, automated grading, and comprehensive reporting.
 
 🔗 **Live Demo:** [https://exam-portal-j3xw.onrender.com/](https://exam-portal-j3xw.onrender.com/)
+
+<!-- JODI KONO SCREENSHOT LAGATE CHAO, NICHER LINE-ER COMMENT SORIE IMAGE LINK DIYE DIO -->
+<!-- ![Dashboard Screenshot](./public/images/screenshot.png) -->
 
 ---
 
@@ -34,14 +33,14 @@ A secure, high-performance web application designed to evaluate candidates throu
 ## 🛠️ Tech Stack
 
 *   **Backend:** Node.js, Express.js
-*   **Database:** MongoDB (Mongoose), Redis (Session Handling, Rate Limiting & Caching)
+*   **Database:** MongoDB (Mongoose)
 *   **Frontend/Views:** EJS (Embedded JavaScript Templates), Bootstrap 5
 *   **Real-time Communication:** Socket.io
 *   **File Handling:** Multer, CSVtoJSON
 *   **Cloud Storage:** Cloudinary (for question images)
 *   **Email Service:** Brevo (formerly Sendinblue) / Nodemailer
 *   **Documentation:** Swagger UI / Swagger JsDoc
-*   **DevOps & Logging:** Docker, Winston (Daily rotating logs), Jest (Testing)
+*   **Logging:** Winston (Daily rotating logs), Request Logger
 
 ---
 
