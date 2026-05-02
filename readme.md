@@ -10,9 +10,28 @@ A secure, high-performance web application designed to evaluate candidates throu
 
 🔗 **Live Demo:** [https://exam-portal-j3xw.onrender.com/](https://exam-portal-j3xw.onrender.com/)
 
-<!-- JODI KONO SCREENSHOT LAGATE CHAO, NICHER LINE-ER COMMENT SORIE IMAGE LINK DIYE DIO -->
-<!-- ![Dashboard Screenshot](./public/images/screenshot.png) -->
 
+### ⚙️ Environment Variables Setup
+
+Create a `.env` file in the root directory and define the following variables:
+```env
+# Database
+MONGO_URL=
+
+# Authentication
+JWT_SECRET=
+
+# Cloudinary Configuration
+CLOUD_NAME=
+CLOUD_API_KEY=
+CLOUD_API_SECRET=
+
+# Email Service (SMTP/Brevo)
+EMAIL_HOST=
+EMAIL_PORT=
+EMAIL_USER=
+EMAIL_PASS=
+EMAIL_FROM=
 ---
 
 ## 🚀 Features & Modules
