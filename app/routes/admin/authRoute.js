@@ -5,6 +5,7 @@ const validateRequest = require('../../middleware/validateRequest');
 const { registerSchema, loginSchema, resetPasswordLinkSchema, resetPasswordSchema } = require('../../utils/authValidation');
 
 // Page Routes 
+router.get('/', AuthController.renderLogin);
 router.get('/login', AuthController.renderLogin);
 router.get('/logout', AuthController.handleLogout);
 router.get('/forgot-password', AuthController.renderForgotPassword);
