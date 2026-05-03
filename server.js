@@ -48,6 +48,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+// Global Limiter
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100,
@@ -58,14 +59,6 @@ const limiter = rateLimit({
 
 app.use(limiter);
 
-const loginLimiter = rateLimit({
-  windowMs: 10 * 60 * 1000, // 10 minutes
-  max: 10,
-  message: "Too many login attempts, please try again after 10 minutes.",
-});
-
-app.use("/login", loginLimiter);
-app.use("/", loginLimiter);
 
 const swaggerOptions = {
   swaggerDefinition: {
