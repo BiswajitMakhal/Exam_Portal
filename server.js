@@ -14,7 +14,7 @@ const logger = require("./app/utils/logger");
 const requestLogger = require("./app/middleware/requestLogger");
 const cookieParser = require("cookie-parser");
 
-// Routes Imports
+//Routes Imports
 const userRoutes = require("./app/routes/admin/userRoutes");
 const userApiRoutes = require("./app/routes/api/userApiRoutes");
 const authRoutes = require("./app/routes/admin/authRoute");
