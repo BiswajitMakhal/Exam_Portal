@@ -110,7 +110,10 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  logger.info(`Server running on http://localhost:${PORT}`);
-  logger.info(`Swagger Docs available at http://localhost:${PORT}/api-docs`);
-});
+// server.listen(PORT, () => {
+//   logger.info(`Server running on http://localhost:${PORT}`);
+//   logger.info(`Swagger Docs available at http://localhost:${PORT}/api-docs`);
+// });
+
+
+module.exports = app;
