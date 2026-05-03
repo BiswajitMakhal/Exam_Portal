@@ -75,6 +75,7 @@ Strict MVC pattern implementation for clean code separation.
 │   ├── models/         # Mongoose schema definitions
 │   ├── routes/         # Express routing (Admin, API, Web)
 │   ├── socket/         # Socket.io event handlers
+│   ├── tests/          # Jest unit and integration tests for APIs
 │   ├── utils/          # Helper functions (Cloudinary, Email templates, Logger)
 │   └── webservice/     # Swagger documentation and REST APIs
 ├── public/
