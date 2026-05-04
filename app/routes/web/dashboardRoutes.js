@@ -1,13 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const ResultController = require("../../controllers/resultController"); 
+const DashboardController = require("../../controllers/admin/dashboardController");
 const { protect, authorize } = require("../../middleware/authMiddleware");
 
 router.use(protect);
 router.use(authorize("SuperAdmin", "Examiner"));
 
-router.get("/", ResultController.renderExamsList);
-
-router.get("/:examId", ResultController.renderScoreboard);
+router.get("/", DashboardController.renderDashboard);
 
 module.exports = router;

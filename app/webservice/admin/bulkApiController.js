@@ -1,9 +1,9 @@
-const User = require("../models/User");
-const Question = require("../models/Question");
-const Exam = require("../models/Exam");
-const parseCSVBuffer = require("../utils/csvParser");
+const User = require("../../models/User");
+const Question = require("../../models/Question");
+const Exam = require("../../models/Exam");
+const parseCSVBuffer = require("../../utils/csvParser");
 const bcrypt = require("bcryptjs");
-const logger = require("../utils/logger");
+const logger = require("../../utils/logger");
 
 class BulkApiController {
   async uploadBulkUsers(req, res) {
@@ -17,12 +17,10 @@ class BulkApiController {
       const usersData = await parseCSVBuffer(req.file.buffer);
 
       if (usersData.length === 0) {
-        return res
-          .status(400)
-          .json({
-            success: false,
-            message: "CSV file is empty or invalid format",
-          });
+        return res.status(400).json({
+          success: false,
+          message: "CSV file is empty or invalid format",
+        });
       }
 
       const existingEmails = await User.find({ isDeleted: false }).distinct(
@@ -41,19 +39,17 @@ class BulkApiController {
             password: row.password
               ? await bcrypt.hash(row.password, salt)
               : defaultPassword,
-            role: "Candidate", 
+            role: "Candidate",
           });
           existingEmails.push(row.email.toLowerCase());
         }
       }
 
       if (validUsersToInsert.length === 0) {
-        return res
-          .status(400)
-          .json({
-            success: false,
-            message: "No new valid users found in CSV to insert",
-          });
+        return res.status(400).json({
+          success: false,
+          message: "No new valid users found in CSV to insert",
+        });
       }
 
       await User.insertMany(validUsersToInsert);

@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
-const Exam = require("../models/Exam");
-const Question = require("../models/Question");
-const Result = require("../models/Result");
-const logger = require("../utils/logger");
+const Exam = require("../../models/Exam");
+const Question = require("../../models/Question");
+const Result = require("../../models/Result");
+const logger = require("../../utils/logger");
 
-const sendEmail = require("../utils/emailSender");
-const { generateReportCardHTML } = require("../utils/emailTemplates");
+const sendEmail = require("../../utils/emailSender");
+const { generateReportCardHTML } = require("../../utils/emailTemplates");
 
 class CandidateController {
   async renderDashboard(req, res) {

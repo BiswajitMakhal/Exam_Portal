@@ -1,7 +1,7 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const CandidateApiController = require('../../webservice/candidateApiController');
-const { protect, authorize } = require('../../middleware/authMiddleware');
+const CandidateApiController = require("../../webservice/candidate/candidateApiController");
+const { protect, authorize } = require("../../middleware/authMiddleware");
 
 /**
  * @swagger
@@ -23,10 +23,10 @@ const { protect, authorize } = require('../../middleware/authMiddleware');
  *         description: Unauthorized
  */
 router.get(
-  '/exams',
+  "/exams",
   protect,
-  authorize('Candidate'),
-  CandidateApiController.getAvailableExams
+  authorize("Candidate"),
+  CandidateApiController.getAvailableExams,
 );
 
 /**
@@ -71,10 +71,10 @@ router.get(
  *         description: Unauthorized
  */
 router.post(
-  '/submit',
+  "/submit",
   protect,
-  authorize('Candidate'),
-  CandidateApiController.submitExam
+  authorize("Candidate"),
+  CandidateApiController.submitExam,
 );
 
 module.exports = router;

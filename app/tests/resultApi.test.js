@@ -8,7 +8,7 @@ const Result = require("../models/Result");
 
 beforeAll(async () => {
   await mongoose.connect(
-    process.env.MONGO_URL 
+    process.env.MONGO_URL_TEST
   );
 });
 

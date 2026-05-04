@@ -1,8 +1,8 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router({ mergeParams: true });
-const QuestionApiController = require('../../webservice/questionApiController');
-const { protect, authorize } = require('../../middleware/authMiddleware');
-const { uploadImage } = require('../../middleware/multerUpload');
+const QuestionApiController = require("../../webservice/admin/questionApiController");
+const { protect, authorize } = require("../../middleware/authMiddleware");
+const { uploadImage } = require("../../middleware/multerUpload");
 
 /**
  * @swagger
@@ -32,7 +32,7 @@ const { uploadImage } = require('../../middleware/multerUpload');
  *       404:
  *         description: Exam not found
  */
-router.get('/exam/:examId', protect, QuestionApiController.getQuestionsByExam);
+router.get("/exam/:examId", protect, QuestionApiController.getQuestionsByExam);
 
 /**
  * @swagger
@@ -76,11 +76,11 @@ router.get('/exam/:examId', protect, QuestionApiController.getQuestionsByExam);
  *         description: Unauthorized
  */
 router.post(
-  '/',
+  "/",
   protect,
-  authorize('SuperAdmin', 'Examiner'),
-  uploadImage.single('image'),
-  QuestionApiController.createQuestion
+  authorize("SuperAdmin", "Examiner"),
+  uploadImage.single("image"),
+  QuestionApiController.createQuestion,
 );
 
 /**
@@ -127,11 +127,11 @@ router.post(
  *         description: Question not found
  */
 router.put(
-  '/:id',
+  "/:id",
   protect,
-  authorize('SuperAdmin', 'Examiner'),
-uploadImage.single('image'),
-  QuestionApiController.updateQuestion
+  authorize("SuperAdmin", "Examiner"),
+  uploadImage.single("image"),
+  QuestionApiController.updateQuestion,
 );
 
 /**
@@ -156,10 +156,10 @@ uploadImage.single('image'),
  *         description: Question not found
  */
 router.delete(
-  '/:id',
+  "/:id",
   protect,
-  authorize('SuperAdmin', 'Examiner'),
-  QuestionApiController.deleteQuestion
+  authorize("SuperAdmin", "Examiner"),
+  QuestionApiController.deleteQuestion,
 );
 
 module.exports = router;

@@ -10,7 +10,7 @@ const Result = require("../models/Result");
 // Database connection setup
 beforeAll(async () => {
   await mongoose.connect(
-    process.env.MONGO_URL 
+    process.env.MONGO_URL_TEST
   );
 });
 

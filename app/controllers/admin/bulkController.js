@@ -1,9 +1,9 @@
-const User = require("../models/User");
-const Question = require("../models/Question");
-const Exam = require("../models/Exam");
-const parseCSVBuffer = require("../utils/csvParser");
+const User = require("../../models/User");
+const Question = require("../../models/Question");
+const Exam = require("../../models/Exam");
+const parseCSVBuffer = require("../../utils/csvParser");
 const bcrypt = require("bcryptjs");
-const logger = require("../utils/logger");
+const logger = require("../../utils/logger");
 
 class BulkController {
   async handleBulkUsersForm(req, res) {

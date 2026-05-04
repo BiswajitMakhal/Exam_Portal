@@ -17,7 +17,7 @@ const cloudinary = require("../config/cloudinary");
 cloudinary.uploader.destroy = jest.fn().mockResolvedValue({ result: "ok" });
 
 beforeAll(async () => {
-  await mongoose.connect(process.env.MONGO_URL);
+  await mongoose.connect(process.env.MONGO_URL_TEST);
 });
 
 afterAll(async () => {

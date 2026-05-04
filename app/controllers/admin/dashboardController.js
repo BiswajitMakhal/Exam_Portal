@@ -1,7 +1,7 @@
-const User = require("../models/User");
-const Exam = require("../models/Exam");
-const Result = require("../models/Result");
-const logger = require("../utils/logger");
+const User = require("../../models/User");
+const Exam = require("../../models/Exam");
+const Result = require("../../models/Result");
+const logger = require("../../utils/logger");
 
 class DashboardController {
   async renderDashboard(req, res) {

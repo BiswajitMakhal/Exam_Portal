@@ -1,7 +1,7 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const ExamApiController = require('../../webservice/examApiController');
-const { protect, authorize } = require('../../middleware/authMiddleware');
+const ExamApiController = require("../../webservice/admin/examApiController");
+const { protect, authorize } = require("../../middleware/authMiddleware");
 
 /**
  * @swagger
@@ -22,7 +22,7 @@ const { protect, authorize } = require('../../middleware/authMiddleware');
  *       401:
  *         description: Unauthorized
  */
-router.get('/', protect, ExamApiController.getAllExams);
+router.get("/", protect, ExamApiController.getAllExams);
 
 /**
  * @swagger
@@ -45,7 +45,7 @@ router.get('/', protect, ExamApiController.getAllExams);
  *       401:
  *         description: Unauthorized
  */
-router.get('/:id', protect, ExamApiController.getExamById);
+router.get("/:id", protect, ExamApiController.getExamById);
 
 /**
  * @swagger
@@ -88,10 +88,10 @@ router.get('/:id', protect, ExamApiController.getExamById);
  *         description: Unauthorized
  */
 router.post(
-  '/',
+  "/",
   protect,
-  authorize('SuperAdmin', 'Examiner'),
-  ExamApiController.createExam
+  authorize("SuperAdmin", "Examiner"),
+  ExamApiController.createExam,
 );
 
 /**
@@ -136,10 +136,10 @@ router.post(
  *         description: Unauthorized
  */
 router.put(
-  '/:id',
+  "/:id",
   protect,
-  authorize('SuperAdmin', 'Examiner'),
-  ExamApiController.updateExam
+  authorize("SuperAdmin", "Examiner"),
+  ExamApiController.updateExam,
 );
 
 /**
@@ -164,10 +164,10 @@ router.put(
  *         description: Unauthorized
  */
 router.delete(
-  '/:id',
+  "/:id",
   protect,
-  authorize('SuperAdmin', 'Examiner'),
-  ExamApiController.deleteExam
+  authorize("SuperAdmin", "Examiner"),
+  ExamApiController.deleteExam,
 );
 
 module.exports = router;

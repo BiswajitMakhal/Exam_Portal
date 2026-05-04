@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const Result = require("../models/Result");
-const Exam = require("../models/Exam");
-const logger = require("../utils/logger");
+const Result = require("../../models/Result");
+const Exam = require("../../models/Exam");
+const logger = require("../../utils/logger");
 
 class ResultApiController {
   async getExamResults(req, res) {
@@ -19,12 +19,10 @@ class ResultApiController {
         exam.examinerId.toString() !== req.user._id.toString() &&
         req.user.role !== "SuperAdmin"
       ) {
-        return res
-          .status(403)
-          .json({
-            success: false,
-            message: "Not authorized to view these results",
-          });
+        return res.status(403).json({
+          success: false,
+          message: "Not authorized to view these results",
+        });
       }
 
       const results = await Result.aggregate([

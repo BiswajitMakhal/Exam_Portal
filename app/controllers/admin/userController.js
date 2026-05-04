@@ -1,17 +1,17 @@
-const User = require("../models/User");
+const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
-const logger = require("../utils/logger");
+const logger = require("../../utils/logger");
 const csv = require("csvtojson");
 
 class UserController {
   async renderUserList(req, res) {
     try {
       const users = await User.find({ isDeleted: false });
-      res.render("admin/users/list", { 
-          title: "Manage Users", 
-          users,
-          success: req.query.success,
-          error: req.query.error 
+      res.render("admin/users/list", {
+        title: "Manage Users",
+        users,
+        success: req.query.success,
+        error: req.query.error,
       });
     } catch (error) {
       logger.error(`Error rendering user list: ${error.message}`);
@@ -21,9 +21,9 @@ class UserController {
 
   async renderCreateForm(req, res) {
     try {
-      res.render("admin/users/create", { 
-          title: "Create New User",
-          error: req.query.error 
+      res.render("admin/users/create", {
+        title: "Create New User",
+        error: req.query.error,
       });
     } catch (error) {
       logger.error(`Error rendering create form: ${error.message}`);
@@ -54,40 +54,46 @@ class UserController {
 
   async bulkUploadUsers(req, res) {
     try {
-        if (!req.file) {
-            return res.redirect(`/admin/users?error=Please upload a CSV file`);
+      if (!req.file) {
+        return res.redirect(`/admin/users?error=Please upload a CSV file`);
+      }
+
+      let csvString = req.file.buffer.toString("utf8");
+      csvString = csvString.replace(/^"|"$/g, "").trim();
+
+      const jsonArray = await csv().fromString(csvString);
+
+      const usersToInsert = [];
+      for (let row of jsonArray) {
+        if (row.name && row.email && row.password) {
+          const salt = await bcrypt.genSalt(10);
+          const hashedPassword = await bcrypt.hash(row.password.trim(), salt);
+
+          usersToInsert.push({
+            name: row.name.trim(),
+            email: row.email.trim(),
+            password: hashedPassword,
+            role: row.role ? row.role.trim() : "Candidate",
+          });
         }
+      }
 
-        let csvString = req.file.buffer.toString('utf8');
-        csvString = csvString.replace(/^"|"$/g, '').trim();
+      if (usersToInsert.length === 0) {
+        return res.redirect(
+          `/admin/users?error=CSV is empty or invalid format`,
+        );
+      }
 
-        const jsonArray = await csv().fromString(csvString);
+      await User.insertMany(usersToInsert, { ordered: false });
 
-        const usersToInsert = [];
-        for (let row of jsonArray) {
-            if (row.name && row.email && row.password) {
-                const salt = await bcrypt.genSalt(10);
-                const hashedPassword = await bcrypt.hash(row.password.trim(), salt);
-
-                usersToInsert.push({
-                    name: row.name.trim(),
-                    email: row.email.trim(),
-                    password: hashedPassword,
-                    role: row.role ? row.role.trim() : 'Candidate'
-                });
-            }
-        }
-
-        if (usersToInsert.length === 0) {
-             return res.redirect(`/admin/users?error=CSV is empty or invalid format`);
-        }
-
-        await User.insertMany(usersToInsert, { ordered: false });
-
-        res.redirect(`/admin/users?success=${usersToInsert.length} Users added successfully via CSV!`);
+      res.redirect(
+        `/admin/users?success=${usersToInsert.length} Users added successfully via CSV!`,
+      );
     } catch (error) {
-        logger.error(`Error in user bulk upload: ${error.message}`);
-        res.redirect(`/admin/users?error=Failed to process CSV. Check for duplicate emails.`);
+      logger.error(`Error in user bulk upload: ${error.message}`);
+      res.redirect(
+        `/admin/users?error=Failed to process CSV. Check for duplicate emails.`,
+      );
     }
   }
 
@@ -97,10 +103,10 @@ class UserController {
       if (!user) {
         return res.redirect("/admin/users?error=User Not Found");
       }
-      res.render("admin/users/edit", { 
-          title: "Edit User", 
-          user,
-          error: req.query.error 
+      res.render("admin/users/edit", {
+        title: "Edit User",
+        user,
+        error: req.query.error,
       });
     } catch (error) {
       logger.error(`Error rendering edit form: ${error.message}`);

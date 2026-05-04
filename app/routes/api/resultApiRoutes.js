@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const ResultApiController = require("../../webservice/resultApiController");
+const ResultApiController = require("../../webservice/admin/resultApiController");
 const { protect, authorize } = require("../../middleware/authMiddleware");
 
 /**

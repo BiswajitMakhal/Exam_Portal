@@ -17,6 +17,8 @@ Create a `.env` file in the root directory and define the following variables:
 ```env
 # Database
 MONGO_URL=
+# Dedicated Database for Jest Testing (Ensure the database name ends with '_test' to avoid overriding main data)
+MONGO_URL_TEST=
 
 # Authentication
 JWT_SECRET=
@@ -67,17 +69,26 @@ EMAIL_FROM=
 
 Strict MVC pattern implementation for clean code separation.
 ```text
+
 .
 ├── app/
 │   ├── config/         # Database and third-party configuration
 │   ├── controllers/    # Request handlers and business logic
+│   │   ├── admin/      # Controllers for SuperAdmin & Examiner actions
+│   │   ├── auth/       # Controllers for Registration, Login, etc.
+│   │   └── candidate/  # Controllers for Candidate exam dashboard
 │   ├── middleware/     # Auth, Error handling, Rate limiting, Uploads
 │   ├── models/         # Mongoose schema definitions
-│   ├── routes/         # Express routing (Admin, API, Web)
+│   ├── routes/         # Express routing
+│   │   ├── api/        # REST API endpoints (Returns JSON/Swagger)
+│   │   └── web/        # Web routes (Renders EJS Templates)
 │   ├── socket/         # Socket.io event handlers
 │   ├── tests/          # Jest unit and integration tests for APIs
 │   ├── utils/          # Helper functions (Cloudinary, Email templates, Logger)
-│   └── webservice/     # Swagger documentation and REST APIs
+│   └── webservice/     # Swagger documentation schemas
+│       ├── admin/      # Swagger docs for Admin APIs
+│       ├── auth/       # Swagger docs for Auth APIs
+│       └── candidate/  # Swagger docs for Candidate APIs
 ├── public/
 │   └── js/             # Client-side scripts (Socket events, UI interactions)
 ├── views/

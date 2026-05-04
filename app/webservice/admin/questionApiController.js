@@ -1,7 +1,7 @@
-const Question = require("../models/Question");
-const cloudinary = require("../config/cloudinary");
-const uploadToCloudinary = require("../utils/cloudinaryUpload"); 
-const logger = require("../utils/logger");
+const Question = require("../../models/Question");
+const cloudinary = require("../../config/cloudinary");
+const uploadToCloudinary = require("../../utils/cloudinaryUpload");
+const logger = require("../../utils/logger");
 
 class QuestionApiController {
   async getQuestionsByExam(req, res) {
@@ -42,13 +42,11 @@ class QuestionApiController {
         marks,
       });
 
-      res
-        .status(201)
-        .json({
-          success: true,
-          data: newQuestion,
-          message: "Question created successfully",
-        });
+      res.status(201).json({
+        success: true,
+        data: newQuestion,
+        message: "Question created successfully",
+      });
     } catch (error) {
       logger.error(`Error in createQuestion API: ${error.message}`);
       res.status(500).json({ success: false, message: error.message });
@@ -95,13 +93,11 @@ class QuestionApiController {
         { new: true },
       );
 
-      res
-        .status(200)
-        .json({
-          success: true,
-          data: updatedQuestion,
-          message: "Question updated successfully",
-        });
+      res.status(200).json({
+        success: true,
+        data: updatedQuestion,
+        message: "Question updated successfully",
+      });
     } catch (error) {
       logger.error(`Error in updateQuestion API: ${error.message}`);
       res.status(500).json({ success: false, message: "Server Error" });

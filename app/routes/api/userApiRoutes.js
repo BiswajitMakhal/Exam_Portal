@@ -1,6 +1,6 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const UserApiController = require('../../webservice/UserApiController');
+const UserApiController = require("../../webservice/admin/UserApiController");
 
 /**
  * @swagger
@@ -36,7 +36,7 @@ const UserApiController = require('../../webservice/UserApiController');
  *       500:
  *         description: Server error
  */
-router.get('/', UserApiController.getAllUsers);
+router.get("/", UserApiController.getAllUsers);
 
 /**
  * @swagger
@@ -72,7 +72,7 @@ router.get('/', UserApiController.getAllUsers);
  *       500:
  *         description: Server error
  */
-router.get('/:id', UserApiController.getUserById);
+router.get("/:id", UserApiController.getUserById);
 
 /**
  * @swagger
@@ -113,7 +113,7 @@ router.get('/:id', UserApiController.getUserById);
  *       500:
  *         description: Server error
  */
-router.post('/', UserApiController.createUser);
+router.post("/", UserApiController.createUser);
 
 /**
  * @swagger
@@ -152,7 +152,7 @@ router.post('/', UserApiController.createUser);
  *       500:
  *         description: Server error
  */
-router.put('/:id', UserApiController.updateUser);
+router.put("/:id", UserApiController.updateUser);
 
 /**
  * @swagger
@@ -175,6 +175,6 @@ router.put('/:id', UserApiController.updateUser);
  *       500:
  *         description: Server error
  */
-router.delete('/:id', UserApiController.deleteUser);
+router.delete("/:id", UserApiController.deleteUser);
 
 module.exports = router;

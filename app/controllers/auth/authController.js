@@ -1,8 +1,8 @@
-const User = require("../models/User");
+const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const logger = require("../utils/logger");
-const sendEmail = require("../utils/emailSender");
+const logger = require("../../utils/logger");
+const sendEmail = require("../../utils/emailSender");
 
 class AuthController {
   async renderRegister(req, res) {
@@ -40,7 +40,7 @@ class AuthController {
         name,
         email,
         password: hashedPassword,
-        role: "Candidate", 
+        role: "Candidate",
       });
 
       res.redirect(

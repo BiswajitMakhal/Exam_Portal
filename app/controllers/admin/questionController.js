@@ -1,8 +1,8 @@
 const csv = require("csvtojson");
-const Question = require("../models/Question");
-const Exam = require("../models/Exam");
-const logger = require("../utils/logger");
-const uploadToCloudinary = require("../utils/cloudinaryUpload");
+const Question = require("../../models/Question");
+const Exam = require("../../models/Exam");
+const logger = require("../../utils/logger");
+const uploadToCloudinary = require("../../utils/cloudinaryUpload");
 
 class QuestionController {
   async renderQuestionsList(req, res) {

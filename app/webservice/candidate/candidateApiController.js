@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const Exam = require("../models/Exam");
-const Question = require("../models/Question");
-const Result = require("../models/Result");
-const logger = require("../utils/logger");
+const Exam = require("../../models/Exam");
+const Question = require("../../models/Question");
+const Result = require("../../models/Result");
+const logger = require("../../utils/logger");
 
 class CandidateApiController {
   async getAvailableExams(req, res) {

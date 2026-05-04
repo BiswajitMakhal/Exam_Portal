@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const Exam = require("../models/Exam");
-const logger = require("../utils/logger");
+const Exam = require("../../models/Exam");
+const logger = require("../../utils/logger");
 
 class ExamController {
   async renderExamList(req, res) {

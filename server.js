@@ -15,21 +15,21 @@ const requestLogger = require("./app/middleware/requestLogger");
 const cookieParser = require("cookie-parser");
 
 //Routes Imports
-const userRoutes = require("./app/routes/admin/userRoutes");
+const userRoutes = require("./app/routes/web/userRoutes");
 const userApiRoutes = require("./app/routes/api/userApiRoutes");
-const authRoutes = require("./app/routes/admin/authRoute");
+const authRoutes = require("./app/routes/web/authRoute");
 const authApiRoutes = require("./app/routes/api/authApiRoutes");
-const examRoutes = require("./app/routes/admin/examRoutes");
+const examRoutes = require("./app/routes/web/examRoutes");
 const examApiRoutes = require("./app/routes/api/examApiRoutes");
-const questionRoutes = require("./app/routes/admin/questionRoutes");
+const questionRoutes = require("./app/routes/web/questionRoutes");
 const questionApiRoutes = require("./app/routes/api/questionApiRoute");
-const bulkRoutes = require("./app/routes/admin/bulkRoutes");
+const bulkRoutes = require("./app/routes/web/bulkRoutes");
 const bulkApiRoutes = require("./app/routes/api/bulkApiRoutes");
-const candidateRoutes = require("./app/routes/admin/candidateRoute");
+const candidateRoutes = require("./app/routes/web/candidateRoute");
 const candidateApiRoutes = require("./app/routes/api/candidateApiRoutes");
-const resultRoutes = require("./app/routes/admin/resultRoutes");
+const resultRoutes = require("./app/routes/web/resultRoutes");
 const resultApiRoutes = require("./app/routes/api/resultApiRoutes");
-const dashboardRoutes = require("./app/routes/admin/dashboardRoutes");
+const dashboardRoutes = require("./app/routes/web/dashboardRoutes");
 
 const app = express();
 const server = http.createServer(app);
@@ -110,10 +110,10 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 3000;
-// server.listen(PORT, () => {
-//   logger.info(`Server running on http://localhost:${PORT}`);
-//   logger.info(`Swagger Docs available at http://localhost:${PORT}/api-docs`);
-// });
+server.listen(PORT, () => {
+  logger.info(`Server running on http://localhost:${PORT}`);
+  logger.info(`Swagger Docs available at http://localhost:${PORT}/api-docs`);
+});
 
 
 module.exports = app;

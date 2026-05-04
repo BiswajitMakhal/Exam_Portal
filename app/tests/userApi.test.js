@@ -4,7 +4,7 @@ const app = require("../../server");
 const User = require("../models/User");
 
 beforeAll(async () => {
-  await mongoose.connect(process.env.MONGO_URL);
+  await mongoose.connect(process.env.MONGO_URL_TEST);
 });
 
 afterAll(async () => {

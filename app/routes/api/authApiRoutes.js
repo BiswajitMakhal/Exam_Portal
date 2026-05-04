@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const AuthApiController = require("../../webservice/authApiController");
+const AuthApiController = require("../../webservice/auth/authApiController");
 const validateRequest = require("../../middleware/validateRequest");
 const {
   registerSchema,

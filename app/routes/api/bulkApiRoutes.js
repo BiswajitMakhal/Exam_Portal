@@ -1,8 +1,8 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const BulkApiController = require('../../webservice/bulkApiController');
-const { protect, authorize } = require('../../middleware/authMiddleware');
-const { uploadCSV } = require('../../middleware/multerUpload');
+const BulkApiController = require("../../webservice/admin/bulkApiController");
+const { protect, authorize } = require("../../middleware/authMiddleware");
+const { uploadCSV } = require("../../middleware/multerUpload");
 
 /**
  * @swagger
@@ -38,11 +38,11 @@ const { uploadCSV } = require('../../middleware/multerUpload');
  *         description: Unauthorized
  */
 router.post(
-  '/users',
+  "/users",
   protect,
-  authorize('SuperAdmin', 'Examiner'),
-  uploadCSV.single('file'),
-  BulkApiController.uploadBulkUsers
+  authorize("SuperAdmin", "Examiner"),
+  uploadCSV.single("file"),
+  BulkApiController.uploadBulkUsers,
 );
 
 /**
@@ -81,11 +81,11 @@ router.post(
  *         description: Exam not found
  */
 router.post(
-  '/questions/:examId',
+  "/questions/:examId",
   protect,
-  authorize('SuperAdmin', 'Examiner'),
-  uploadCSV.single('file'),
-  BulkApiController.uploadBulkQuestions
+  authorize("SuperAdmin", "Examiner"),
+  uploadCSV.single("file"),
+  BulkApiController.uploadBulkQuestions,
 );
 
 module.exports = router;

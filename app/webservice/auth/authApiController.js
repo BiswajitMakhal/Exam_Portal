@@ -1,8 +1,8 @@
-const User = require("../models/User");
+const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const logger = require("../utils/logger");
-const sendEmail = require("../utils/emailSender");
+const logger = require("../../utils/logger");
+const sendEmail = require("../../utils/emailSender");
 
 class AuthApiController {
   async register(req, res) {
@@ -17,12 +17,10 @@ class AuthApiController {
 
       const userExists = await User.findOne({ email });
       if (userExists) {
-        return res
-          .status(400)
-          .json({
-            success: false,
-            message: "User already exists with this email",
-          });
+        return res.status(400).json({
+          success: false,
+          message: "User already exists with this email",
+        });
       }
 
       const salt = await bcrypt.genSalt(10);
@@ -35,12 +33,10 @@ class AuthApiController {
         role: "Candidate",
       });
 
-      res
-        .status(201)
-        .json({
-          success: true,
-          message: "Registration successful. Please log in.",
-        });
+      res.status(201).json({
+        success: true,
+        message: "Registration successful. Please log in.",
+      });
     } catch (error) {
       logger.error(`API Register Error: ${error.message}`);
       res.status(500).json({ success: false, message: "Server Error" });

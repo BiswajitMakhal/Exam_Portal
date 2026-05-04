@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const Result = require("../models/Result");
-const Exam = require("../models/Exam");
-const logger = require("../utils/logger");
+const Result = require("../../models/Result");
+const Exam = require("../../models/Exam");
+const logger = require("../../utils/logger");
 
 class ResultController {
   async renderExamsList(req, res) {
@@ -46,7 +46,7 @@ class ResultController {
         },
         {
           $lookup: {
-            from: "users", 
+            from: "users",
             localField: "candidateId",
             foreignField: "_id",
             as: "candidateDetails",

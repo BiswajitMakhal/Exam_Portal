@@ -1,6 +1,6 @@
-const User = require("../models/User");
+const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
-const logger = require("../utils/logger");
+const logger = require("../../utils/logger");
 
 class UserApiController {
   async getAllUsers(req, res) {
@@ -53,13 +53,11 @@ class UserApiController {
       });
 
       newUser.password = undefined;
-      res
-        .status(201)
-        .json({
-          success: true,
-          data: newUser,
-          message: "User created successfully",
-        });
+      res.status(201).json({
+        success: true,
+        data: newUser,
+        message: "User created successfully",
+      });
     } catch (error) {
       logger.error(`Error in createUser API: ${error.message}`);
       res.status(500).json({ success: false, message: error.message });
@@ -83,13 +81,11 @@ class UserApiController {
           .json({ success: false, message: "User not found" });
       }
 
-      res
-        .status(200)
-        .json({
-          success: true,
-          data: updatedUser,
-          message: "User updated successfully",
-        });
+      res.status(200).json({
+        success: true,
+        data: updatedUser,
+        message: "User updated successfully",
+      });
     } catch (error) {
       logger.error(`Error in updateUser API: ${error.message}`);
       res.status(500).json({ success: false, message: "Server Error" });
@@ -111,12 +107,10 @@ class UserApiController {
           .json({ success: false, message: "User not found" });
       }
 
-      res
-        .status(200)
-        .json({
-          success: true,
-          message: "User deleted successfully (Soft Delete)",
-        });
+      res.status(200).json({
+        success: true,
+        message: "User deleted successfully (Soft Delete)",
+      });
     } catch (error) {
       logger.error(`Error in deleteUser API: ${error.message}`);
       res.status(500).json({ success: false, message: "Server Error" });
