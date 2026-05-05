@@ -1,0 +1,96 @@
+<%- include('../../layouts/header') %>
+    <!-- Note: Tomar jodi navbar/sidebar thake, tahole tar include ekhane dibe -->
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0"><i class="fas fa-user-edit me-2"></i>Edit User</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- Form ta ekhane ache. Data-id te amra user-er ID ta lukiye rakhchi -->
+                        <form id="editUserForm" data-id="<%= user._id %>">
+
+                            <div class="mb-3">
+                                <label for="name" class="form-label fw-bold">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" value="<%= user.name %>"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold">Email Address</label>
+                                <!-- Email sadharonoto update kora jay na, tai eita 'disabled' rakha holo -->
+                                <input type="email" class="form-control bg-light" id="email" value="<%= user.email %>"
+                                    disabled>
+                                <small class="text-muted">Email address cannot be changed.</small>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="role" class="form-label fw-bold">User Role</label>
+                                <select class="form-select" id="role" name="role" required>
+                                    <option value="Candidate" <%=user.role==='Candidate' ? 'selected' : '' %>>Candidate
+                                    </option>
+                                    <option value="Examiner" <%=user.role==='Examiner' ? 'selected' : '' %>>Examiner
+                                    </option>
+                                    <option value="SuperAdmin" <%=user.role==='SuperAdmin' ? 'selected' : '' %>>Super
+                                        Admin</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <a href="/admin/users" class="btn btn-outline-secondary">Cancel</a>
+                                <button type="submit" class="btn btn-success">Update User</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle the form submission -->
+    <script>
+        document.getElementById('editUserForm').addEventListener('submit', async function (e) {
+            e.preventDefault(); // Page jate reload na hoy
+
+            const userId = this.getAttribute('data-id');
+            const name = document.getElementById('name').value;
+            const role = document.getElementById('role').value;
+            const submitBtn = this.querySelector('button[type="submit"]');
+
+            // Button disabled kore loading text dekhano
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Updating...';
+
+            try {
+                // Tomar toiri kora API-te PUT request pathano hocche
+                const response = await fetch(`/api/users/${userId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, role })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert('User updated successfully!');
+                    // Update hoye gele abar user list page-e ferot pathano
+                    window.location.href = '/admin/users';
+                } else {
+                    alert('Error updating user: ' + (result.message || 'Unknown error'));
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Update User';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Something went wrong! Check console.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Update User';
+            }
+        });
+    </script>
+
+    <%- include('../../layouts/footer') %>
