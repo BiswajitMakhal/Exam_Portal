@@ -84,7 +84,6 @@ Password: Teacher@123
 
 > **Note:** To test the **Candidate** dashboard, you can simply register a new account directly from the portal's signup page.
 
----
 
 ## 📂 Folder Structure
 
