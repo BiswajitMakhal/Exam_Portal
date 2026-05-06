@@ -65,14 +65,26 @@ EMAIL_FROM=
 
 ---
 
+
 ## 🔐 Demo Credentials
 
-Use the following credentials to test the role-based dashboards:
+Use the following credentials to test the role-based dashboards. *(Hover over the text blocks below to copy)*
 
-* **Role:** Super Admin  |  **Email:** `admin@demo.com`  |  **Password:** `Admin@123`
-* **Role:** Examiner     |  **Email:** `teacher@demo.com` |  **Password:** `Teacher@123`
+**Super Admin**
+```text
+Email: admin@demo.com
+Password: Admin@123
+```
+
+**Examiner**
+```text
+Email: teacher@demo.com
+Password: Teacher@123
+```
 
 > **Note:** To test the **Candidate** dashboard, you can simply register a new account directly from the portal's signup page.
+
+---
 
 ## 📂 Folder Structure
 
