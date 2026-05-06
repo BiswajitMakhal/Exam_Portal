@@ -65,6 +65,17 @@ EMAIL_FROM=
 
 ---
 
+## 🔐 Demo Credentials
+
+Use the following credentials to test the role-based dashboards:
+
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **Super Admin** | `admin@demo.com` | `Admin@123` |
+| **Examiner** | `teacher@demo.com` | `Teacher@123` |
+
+> **Note:** To test the **Candidate** dashboard, you can simply register a new account from the portal's signup page.
+
 ## 📂 Folder Structure
 
 Strict MVC pattern implementation for clean code separation.
